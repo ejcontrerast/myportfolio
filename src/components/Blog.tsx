@@ -3,7 +3,7 @@ import React from 'react';
 
 const Blog: React.FC = () => {
   return (
-    <section id="blog" className="p-8 bg-gray-100 text-center">
+    <section id="blog" className="p-8 text-center">
       <h2 className="text-3xl font-bold">Blog</h2>
       <p className="mt-4">Here are some articles and thoughts on tech and development.</p>
       <div className="mt-4 flex flex-col items-center">
