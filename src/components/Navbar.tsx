@@ -21,39 +21,114 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="w-screen flex justify-between items-center p-4 bg-dark-background dark:bg-light-background">
+    <nav className="w-screen flex justify-between items-center pl-3 py-3 dark:bg-dark-background bg-light-background px-6 backdrop-blur-3xl">
       {/* Logo Section */}
-      <div className="text-xl font-bold text-dark-primary dark:text-light-primary">
-        <img src="src/assets/logo.png" alt="Logo" className="w-auto h-4 mr-2 inline-block" />
+      <div className="font-thin dark:text-dark-primary text-light-primary pb-1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 190 110"
+          className="w-auto h-6"
+        >
+          {/* Left Angle Bracket */}
+          <text
+            x="20"
+            y="85"
+            fontSize="100"
+            fontFamily="Algerian"
+            fill="#26DA8A"
+            transform="scale(0.72 1.4)"
+          >
+            &lt;
+          </text>
+
+          {/* "e" Letter */}
+          <text
+            x="72"
+            y="95"
+            fontSize="230"
+            fontFamily="Freestyle Script"
+            fill="#26DA8A"
+            transform="scale(0.88 1.13)"
+          >
+            e
+          </text>
+
+          {/* "c" Letter */}
+          <text
+            x="125"
+            y="92"
+            fontSize="225"
+            fontFamily="Freestyle Script"
+            fill="#26DA8A"
+            transform="scale(0.89 1.13)"
+          >
+            c
+          </text>
+
+          {/* Right Angle Bracket */}
+          <text
+            x="200"
+            y="85"
+            fontSize="100"
+            fontFamily="Algerian"
+            fill="#26DA8A"
+            transform="scale(0.75 1.34)"
+          >
+            &gt;
+          </text>
+        </svg>
       </div>
 
       {/* Internal Links */}
-      <div className="space-x-4">
-        <Link to="about" smooth={true} offset={-70} className="cursor-pointer text-dark-primary dark:text-light-primary hover:text-dark-accent dark:hover:text-light-accent">About</Link>
-        <Link to="projects" smooth={true} offset={-70} className="cursor-pointer text-dark-primary dark:text-light-primary hover:text-dark-accent dark:hover:text-light-accent">Projects</Link>
-        <Link to="contact" smooth={true} offset={-70} className="cursor-pointer text-dark-primary dark:text-light-primary hover:text-dark-accent dark:hover:text-light-accent">Contact</Link>
+      <div className="space-x-6 font-sans">
+        <Link to="about" smooth={true} offset={-70} className="cursor-pointer dark:text-dark-primary text-light-primary hover:text-dark-accent dark:hover:text-light-accent">About</Link>
+        <Link to="projects" smooth={true} offset={-70} className="cursor-pointer dark:text-dark-primary text-light-primary hover:text-dark-accent dark:hover:text-light-accent">Projects</Link>
+        <Link to="contact" smooth={true} offset={-70} className="cursor-pointer dark:text-dark-primary text-light-primary hover:text-dark-accent dark:hover:text-light-accent">Contact</Link>
       </div>
 
       {/* External Links and Theme Toggle */}
-      <div className="flex items-center space-x-4">
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="cursor-pointer text-dark-primary dark:text-light-primary hover:text-dark-accent dark:hover:text-light-accent hidden sm:block">
+      <div className="flex items-center space-x-1">
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="cursor-pointer dark:text-dark-primary text-light-primary hover:text-dark-accent dark:hover:text-light-accent hidden sm:block">
           LinkedIn
         </a>
-        <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="cursor-pointer text-dark-primary dark:text-light-primary hover:text-dark-accent dark:hover:text-light-accent hidden sm:block">
+        <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="cursor-pointer dark:text-dark-primary text-light-primary hover:text-dark-accent dark:hover:text-light-accent hidden sm:block">
           GitHub
         </a>
 
         {/* Theme Toggle Button */}
-        <button onClick={toggleTheme} className="focus:outline-none text-dark-primary dark:text-light-primary">
+        <button onClick={toggleTheme} className="bg-light-background dark:bg-dark-background cursor-pointer focus:outline-none hover:ring-2 hover:ring-light-accent/80 rounded-lg p-1">
           {isDarkMode ? (
             // Night icon SVG
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m8.485-11.515l-.707.707M4.222 19.778l-.707-.707M18 12a6 6 0 11-12 0 6 6 0 0112 0zm1.415 7.071l.707-.707M4.222 4.222l.707.707M21 12h1M3 12H2" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="800"
+              height="800"
+              viewBox="0 0 512 512"
+              className="w-auto h-4"
+            >
+              <path
+                d="M504.864 323.637a24.137 24.137 0 0 0-26.487-5.158c-26.92 11.402-55.471 17.185-84.859 17.185-50.762 0-98.865-17.292-137.581-49.088a221.303 221.303 0 0 1-16.035-14.542c-62.92-62.921-81.149-156.528-46.443-238.475A24.142 24.142 0 0 0 161.81 1.915c-31.493 13.343-59.786 32.433-84.093 56.741-103.537 103.537-103.534 272.01.006 375.554 47.9 47.898 110.871 75.229 178.214 77.603 3.185.111 6.377.188 9.581.188 70.925 0 137.61-27.624 187.766-77.78 24.308-24.311 43.4-52.605 56.738-84.094a24.144 24.144 0 0 0-5.158-26.49z"
+                fill="#f6e27d"
+              />
+              <path
+                d="M504.864 323.637a24.137 24.137 0 0 0-26.487-5.158c-26.92 11.402-55.471 17.185-84.859 17.185-50.762 0-98.865-17.292-137.581-49.088v225.235c3.185.111 6.377.188 9.581.188 70.925 0 137.61-27.624 187.766-77.78 24.308-24.311 43.4-52.605 56.738-84.094a24.142 24.142 0 0 0-5.158-26.488z"
+                fill="#f2d23d"
+              />
             </svg>
           ) : (
             // Day icon SVG
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m8.485-11.515l-.707.707M4.222 19.778l-.707-.707M18 12a6 6 0 11-12 0 6 6 0 0112 0zm1.415 7.071l.707-.707M4.222 4.222l.707.707M21 12h1M3 12H2" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              className="w-auto h-4"
+            >
+              <path
+                fill="#FFC10A"
+                d="M26 16c0 5.5-4.5 10-10 10S6 21.5 6 16 10.5 6 16 6s10 4.5 10 10z"
+              />
+              <g fill="#F44236">
+                <path d="M16 1c-.6 0-1 .4-1 1v2c0 .6.4 1 1 1s1-.4 1-1V2c0-.6-.4-1-1-1zM16 27c-.6 0-1 .4-1 1v2c0 .6.4 1 1 1s1-.4 1-1v-2c0-.6-.4-1-1-1zM30 15h-2c-.6 0-1 .4-1 1s.4 1 1 1h2c.6 0 1-.4 1-1s-.4-1-1-1zM4 15H2c-.6 0-1 .4-1 1s.4 1 1 1h2c.6 0 1-.4 1-1s-.4-1-1-1zM25.2 5.4l-1.4 1.4c-.4.4-.4 1 0 1.4.2.2.5.3.7.3s.5-.1.7-.3l1.4-1.4c.4-.4.4-1 0-1.4s-1-.4-1.4 0zM6.8 23.8l-1.4 1.4c-.4.4-.4 1 0 1.4.2.2.5.3.7.3s.5-.1.7-.3l1.4-1.4c.4-.4.4-1 0-1.4s-1-.4-1.4 0zM6.8 5.4c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l1.4 1.4c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4L6.8 5.4zM25.2 23.8c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l1.4 1.4c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4l-1.4-1.4z"/>
+              </g>
             </svg>
           )}
         </button>
@@ -63,3 +138,5 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+
+
