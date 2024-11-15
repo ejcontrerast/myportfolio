@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="w-screen flex justify-between items-center pl-3 py-3 dark:bg-dark-background bg-light-background px-6 backdrop-blur-3xl">
       {/* Logo Section */}
-      <div className="font-thin dark:text-dark-primary text-light-primary pb-1">
+      <div className="font-thin flex  dark:text-dark-accent text-light-accent">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 190 110"
@@ -77,7 +77,58 @@ const Navbar: React.FC = () => {
             &gt;
           </text>
         </svg>
+
+
+      {/* Logo - Ernesto Contreras */}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 130 50"
+        className="w-auto h-7 dark:text-dark-accent text-light-accent sm:block hidden"
+      >
+        {/* ERNESTO Text */}
+        <text
+          className="fill-current"
+          style={{
+            fontSize: '26px', // Matches original size.
+            textAnchor: 'start', // Aligns text to start from x coordinate.
+          }}
+        >
+          <tspan
+            x="7"
+            y="23"
+            style={{
+              fontFamily: '"Myanmar Text", sans-serif', // Myanmar Text with fallback.
+              fontWeight: 550,
+            }}
+          >
+            ERNESTO
+          </tspan>
+        </text>
+
+        {/* CONTRERAS Text */}
+        <text
+          className="fill-current"
+          style={{
+            fontSize: '23px', // Matches original size.
+            textAnchor: 'start', // Aligns text to start.
+            transform: 'scale(0.86, 1.16)', // Applies scaling transformation.
+          }}
+        >
+          <tspan
+            x="7"
+            y="35"
+            style={{
+              fontFamily: '"Myanmar Text", sans-serif', // Myanmar Text with fallback.
+              fontWeight: 550,
+            }}
+          >
+            CONTRERAS
+          </tspan>
+        </text>
+      </svg>
+
       </div>
+
 
       {/* Internal Links */}
       <div className="space-x-6 font-sans">
@@ -109,7 +160,7 @@ const Navbar: React.FC = () => {
         </svg>
 
         {/* Theme Toggle Button */}
-        <button onClick={toggleTheme} className="bg-light-background dark:bg-dark-background cursor-pointer focus:outline-none hover:ring-2 hover:ring-light-accent/80 rounded-lg p-1">
+        <button onClick={toggleTheme} className="bg-light-background dark:bg-dark-background cursor-pointer focus:outline-none hover:ring-2 hover:ring-light-accent/80 rounded-sm p-1">
           {isDarkMode ? (
             // Night icon SVG
             <svg
