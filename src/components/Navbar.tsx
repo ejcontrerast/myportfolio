@@ -88,12 +88,17 @@ const Navbar: React.FC = () => {
 
       {/* External Links and Theme Toggle */}
       <div className="flex items-center space-x-1">
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="cursor-pointer dark:text-dark-primary text-light-primary hover:text-dark-accent dark:hover:text-light-accent hidden sm:block">
-          LinkedIn
-        </a>
         <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="cursor-pointer dark:text-dark-primary text-light-primary hover:text-dark-accent dark:hover:text-light-accent hidden sm:block">
           GitHub
         </a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="-143 145 512 512"
+          className="w-6 h-6 dark:fill-dark-primary fill-light-primary hidden sm:block dark:hover:fill-dark-accent hover:fill-light-accent"
+        >
+          <path d="M329 145h-432a40 40 0 0 0-40 40v432a40 40 0 0 0 40 40h432a40 40 0 0 0 40-40V185a40 40 0 0 0-40-40zm10 472a10 10 0 0 1-10 10h-432a10 10 0 0 1-10-10V185a10 10 0 0 1 10-10h432a10 10 0 0 1 10 10v432z" />
+          <path d="M-8.5 348.4h49.9v159.7H-8.5zM177.7 346.9c-28.6 0-46.5 15.6-49.8 26.6v-25.1H71.8c.7 13.3 0 159.7 0 159.7h56.1v-86.3c0-4.9-.2-9.7 1.2-13.1 3.8-9.6 12.1-19.6 27-19.6 19.5 0 28.3 14.8 28.3 36.4v82.6H241v-88.8c0-49.4-27.8-72.4-63.3-72.4zM15.4 273c-18.4 0-30.5 11.9-30.5 27.7 0 15.5 11.7 27.7 29.8 27.7h.4c18.8 0 30.5-12.3 30.4-27.7-.4-15.8-11.7-27.7-30.1-27.7z" />
+        </svg>
 
         {/* Theme Toggle Button */}
         <button onClick={toggleTheme} className="bg-light-background dark:bg-dark-background cursor-pointer focus:outline-none hover:ring-2 hover:ring-light-accent/80 rounded-lg p-1">
