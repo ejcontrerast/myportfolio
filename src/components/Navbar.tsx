@@ -21,114 +21,114 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="w-screen flex justify-between items-center pl-3 py-3 dark:bg-dark-background bg-light-background px-6 backdrop-blur-3xl">
+    <nav className="fixed top-0 z-50 shadow-lg w-full flex justify-between items-center p-3 dark:bg-dark-background bg-light-background backdrop-blur-3xl sm:px-10 lg:px-16 2xl:px-24">
       {/* Logo Section */}
-      <div className="font-thin flex  dark:text-dark-accent text-light-accent">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 190 110"
-          className="w-auto h-6"
-        >
-          {/* Left Angle Bracket */}
-          <text
-            x="20"
-            y="85"
-            fontSize="100"
-            fontFamily="Algerian"
-            fill="#26DA8A"
-            transform="scale(0.72 1.4)"
+      <Link to="hello" smooth={true} offset={-70} className="cursor-pointer">
+        <div className="font-thin flex  dark:text-dark-accent text-light-accent">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 190 110"
+            className="w-auto h-6"
           >
-            &lt;
-          </text>
+            {/* Left Angle Bracket */}
+            <text
+              x="20"
+              y="85"
+              fontSize="100"
+              fontFamily="Algerian"
+              fill="#26DA8A"
+              transform="scale(0.72 1.4)"
+            >
+              &lt;
+            </text>
 
-          {/* "e" Letter */}
-          <text
-            x="72"
-            y="95"
-            fontSize="230"
-            fontFamily="Freestyle Script"
-            fill="#26DA8A"
-            transform="scale(0.88 1.13)"
+            {/* "e" Letter */}
+            <text
+              x="72"
+              y="95"
+              fontSize="230"
+              fontFamily="Freestyle Script"
+              fill="#26DA8A"
+              transform="scale(0.88 1.13)"
+            >
+              e
+            </text>
+
+            {/* "c" Letter */}
+            <text
+              x="125"
+              y="92"
+              fontSize="225"
+              fontFamily="Freestyle Script"
+              fill="#26DA8A"
+              transform="scale(0.89 1.13)"
+            >
+              c
+            </text>
+
+            {/* Right Angle Bracket */}
+            <text
+              x="200"
+              y="85"
+              fontSize="100"
+              fontFamily="Algerian"
+              fill="#26DA8A"
+              transform="scale(0.75 1.34)"
+            >
+              &gt;
+            </text>
+          </svg>
+
+
+        {/* Logo - Ernesto Contreras */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 130 50"
+            className="w-auto h-7 dark:text-dark-accent text-light-accent sm:block hidden"
           >
-            e
-          </text>
+            {/* ERNESTO Text */}
+            <text
+              className="fill-current"
+              style={{
+                fontSize: '26px', // Matches original size.
+                textAnchor: 'start', // Aligns text to start from x coordinate.
+              }}
+            >
+              <tspan
+                x="7"
+                y="23"
+                style={{
+                  fontFamily: '"Myanmar Text", sans-serif', // Myanmar Text with fallback.
+                  fontWeight: 550,
+                }}
+              >
+                ERNESTO
+              </tspan>
+            </text>
 
-          {/* "c" Letter */}
-          <text
-            x="125"
-            y="92"
-            fontSize="225"
-            fontFamily="Freestyle Script"
-            fill="#26DA8A"
-            transform="scale(0.89 1.13)"
-          >
-            c
-          </text>
-
-          {/* Right Angle Bracket */}
-          <text
-            x="200"
-            y="85"
-            fontSize="100"
-            fontFamily="Algerian"
-            fill="#26DA8A"
-            transform="scale(0.75 1.34)"
-          >
-            &gt;
-          </text>
-        </svg>
-
-
-      {/* Logo - Ernesto Contreras */}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 130 50"
-        className="w-auto h-7 dark:text-dark-accent text-light-accent sm:block hidden"
-      >
-        {/* ERNESTO Text */}
-        <text
-          className="fill-current"
-          style={{
-            fontSize: '26px', // Matches original size.
-            textAnchor: 'start', // Aligns text to start from x coordinate.
-          }}
-        >
-          <tspan
-            x="7"
-            y="23"
-            style={{
-              fontFamily: '"Myanmar Text", sans-serif', // Myanmar Text with fallback.
-              fontWeight: 550,
-            }}
-          >
-            ERNESTO
-          </tspan>
-        </text>
-
-        {/* CONTRERAS Text */}
-        <text
-          className="fill-current"
-          style={{
-            fontSize: '23px', // Matches original size.
-            textAnchor: 'start', // Aligns text to start.
-            transform: 'scale(0.86, 1.16)', // Applies scaling transformation.
-          }}
-        >
-          <tspan
-            x="7"
-            y="35"
-            style={{
-              fontFamily: '"Myanmar Text", sans-serif', // Myanmar Text with fallback.
-              fontWeight: 550,
-            }}
-          >
-            CONTRERAS
-          </tspan>
-        </text>
-      </svg>
-
-      </div>
-
+            {/* CONTRERAS Text */}
+            <text
+              className="fill-current"
+              style={{
+                fontSize: '23px', // Matches original size.
+                textAnchor: 'start', // Aligns text to start.
+                transform: 'scale(0.86, 1.16)', // Applies scaling transformation.
+              }}
+            >
+              <tspan
+                x="7"
+                y="35"
+                style={{
+                  fontFamily: '"Myanmar Text", sans-serif', // Myanmar Text with fallback.
+                  fontWeight: 550,
+                }}
+              >
+                CONTRERAS
+              </tspan>
+            </text>
+          </svg>
+        </div>
+      </Link>
 
       {/* Internal Links */}
       <div className="space-x-6 font-sans">
@@ -143,7 +143,7 @@ const Navbar: React.FC = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-143 145 512 512"
-          className="w-6 h-6 dark:fill-dark-primary fill-light-primary hidden sm:block dark:hover:fill-dark-accent hover:fill-light-accent"
+          className="h-6 dark:fill-dark-primary fill-light-primary hidden sm:block dark:hover:fill-dark-accent hover:fill-light-accent"
         >
           <path d="M329 145h-432a40 40 0 0 0-40 40v432a40 40 0 0 0 40 40h432a40 40 0 0 0 40-40V185a40 40 0 0 0-40-40zm10 472a10 10 0 0 1-10 10h-432a10 10 0 0 1-10-10V185a10 10 0 0 1 10-10h432a10 10 0 0 1 10 10v432z" />
           <path d="M-8.5 348.4h49.9v159.7H-8.5zM177.7 346.9c-28.6 0-46.5 15.6-49.8 26.6v-25.1H71.8c.7 13.3 0 159.7 0 159.7h56.1v-86.3c0-4.9-.2-9.7 1.2-13.1 3.8-9.6 12.1-19.6 27-19.6 19.5 0 28.3 14.8 28.3 36.4v82.6H241v-88.8c0-49.4-27.8-72.4-63.3-72.4zM15.4 273c-18.4 0-30.5 11.9-30.5 27.7 0 15.5 11.7 27.7 29.8 27.7h.4c18.8 0 30.5-12.3 30.4-27.7-.4-15.8-11.7-27.7-30.1-27.7z" />
