@@ -101,7 +101,6 @@ const Navbar: React.FC = () => {
                   fontFamily: 'sans-serif', // Myanmar Text with fallback.
                   fontWeight: 400,
                 }}
-                className='shadow-lg shadow-dark-accent'
               >
                 ERNESTO
               </tspan>
