@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 z-50 shadow-lg w-full flex justify-between items-center p-3 dark:bg-dark-background bg-light-background backdrop-blur-3xl sm:px-10 lg:px-16 2xl:px-24">
+    <nav className="fixed top-0 z-50 shadow-lg w-full flex justify-between items-center p-3 dark:bg-dark-background bg-light-background dark:bg-opacity-60 backdrop-blur-sm sm:px-10 lg:px-16 2xl:px-24">
       {/* Logo Section */}
       <Link to="hello" smooth={true} offset={-70} className="cursor-pointer">
         <div className="font-thin flex  dark:text-dark-accent text-light-accent">
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
 
             {/* "c" Letter */}
             <text
-              x="125"
+              x="121"
               y="92"
               fontSize="225"
               fontFamily="Freestyle Script"
@@ -83,24 +83,25 @@ const Navbar: React.FC = () => {
         {/* Logo - Ernesto Contreras */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 130 50"
-            className="w-auto h-7 dark:text-dark-accent text-light-accent sm:block hidden"
+            viewBox="0 0 140 50"
+            className="w-auto h-6 dark:text-dark-accent text-light-accent sm:block hidden"
           >
             {/* ERNESTO Text */}
             <text
               className="fill-current"
               style={{
-                fontSize: '26px', // Matches original size.
+                fontSize: '22px', // Matches original size.
                 textAnchor: 'start', // Aligns text to start from x coordinate.
               }}
             >
               <tspan
-                x="7"
-                y="23"
+                x="4"
+                y="24"
                 style={{
-                  fontFamily: '"Myanmar Text", sans-serif', // Myanmar Text with fallback.
-                  fontWeight: 550,
+                  fontFamily: 'sans-serif', // Myanmar Text with fallback.
+                  fontWeight: 400,
                 }}
+                className='shadow-lg shadow-dark-accent'
               >
                 ERNESTO
               </tspan>
@@ -116,11 +117,11 @@ const Navbar: React.FC = () => {
               }}
             >
               <tspan
-                x="7"
-                y="35"
+                x="5"
+                y="38"
                 style={{
-                  fontFamily: '"Myanmar Text", sans-serif', // Myanmar Text with fallback.
-                  fontWeight: 550,
+                  fontFamily: 'sans-serif', // Myanmar Text with fallback.
+                  fontWeight: 600,
                 }}
               >
                 CONTRERAS
@@ -143,7 +144,7 @@ const Navbar: React.FC = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-143 145 512 512"
-          className="h-6 dark:fill-dark-primary fill-light-primary hidden sm:block dark:hover:fill-dark-accent hover:fill-light-accent"
+          className="h-6 cursor-pointer dark:fill-dark-primary fill-light-primary hidden sm:block dark:hover:fill-dark-accent hover:fill-light-accent"
         >
           <path d="M329 145h-432a40 40 0 0 0-40 40v432a40 40 0 0 0 40 40h432a40 40 0 0 0 40-40V185a40 40 0 0 0-40-40zm10 472a10 10 0 0 1-10 10h-432a10 10 0 0 1-10-10V185a10 10 0 0 1 10-10h432a10 10 0 0 1 10 10v432z" />
           <path d="M-8.5 348.4h49.9v159.7H-8.5zM177.7 346.9c-28.6 0-46.5 15.6-49.8 26.6v-25.1H71.8c.7 13.3 0 159.7 0 159.7h56.1v-86.3c0-4.9-.2-9.7 1.2-13.1 3.8-9.6 12.1-19.6 27-19.6 19.5 0 28.3 14.8 28.3 36.4v82.6H241v-88.8c0-49.4-27.8-72.4-63.3-72.4zM15.4 273c-18.4 0-30.5 11.9-30.5 27.7 0 15.5 11.7 27.7 29.8 27.7h.4c18.8 0 30.5-12.3 30.4-27.7-.4-15.8-11.7-27.7-30.1-27.7z" />
@@ -152,7 +153,7 @@ const Navbar: React.FC = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-143 145 512 512"
-          className="w-6 h-6 dark:fill-dark-primary fill-light-primary hidden sm:block dark:hover:fill-dark-accent hover:fill-light-accent"
+          className="h-6 cursor-pointer dark:fill-dark-primary fill-light-primary hidden sm:block dark:hover:fill-dark-accent hover:fill-light-accent"
         >
           <path d="M329 145h-432a40 40 0 0 0-40 40v432a40 40 0 0 0 40 40h432a40 40 0 0 0 40-40V185a40 40 0 0 0-40-40zm10 472a10 10 0 0 1-10 10h-432a10 10 0 0 1-10-10V185a10 10 0 0 1 10-10h432a10 10 0 0 1 10 10v432z" />
           <path d="M224.5 351.2c.9-20.1-1.8-39.6-8.6-58.6-.9-2.4-2-3.3-4.5-2.6-5.6 1.7-11.4 3-16.9 5a213 213 0 0 0-42.6 22.2 8 8 0 0 1-5.2 1.2 203.3 203.3 0 0 0-66.5-.3c-2.2.3-5-.2-6.8-1.3-15.7-10.2-31.7-20.2-50-25-15.1-4-12-4.8-16.3 8.9a139.6 139.6 0 0 0-6 50.6c.1 1.2-.8 2.7-1.6 3.8a77.4 77.4 0 0 0-14.8 26.4c-6 19-4.8 38.2-1 57.3 7.5 37.5 32.8 63.8 70.2 70.3 19.3 3.4 39.2 3.7 57.3 5.2 20.2-1.5 38.9-1.6 57.1-4.5 31.8-5.1 55.8-22 67.8-52.7 4.2-10.7 6.5-22.4 7.9-33.8 3.1-25.2-1.2-48.8-18.4-68.7a6.3 6.3 0 0 1-1.1-3.4zm-16.4 107.9a40.8 40.8 0 0 1-27.6 31.8 160 160 0 0 1-45.4 8.6c-7.5.5-15 .1-22.5.1a195 195 0 0 1-59.9-6.2c-24.5-7.3-35.5-21.9-36.2-47.5-.3-9.1.7-17.9 5-26.1 8.5-16.5 23.2-22.3 40.6-22.6 9.5-.1 19.1.7 28.7 1.6 20.1 1.8 40-.1 60-1.2 8.8-.5 17.8-.7 26.4.8 18.5 3.2 32.5 21.6 32.8 42.3a95 95 0 0 1-1.9 18.4z" />
@@ -160,7 +161,7 @@ const Navbar: React.FC = () => {
         </svg>
 
         {/* Theme Toggle Button */}
-        <button onClick={toggleTheme} className="bg-light-background dark:bg-dark-background cursor-pointer focus:outline-none hover:ring-2 hover:ring-light-accent/80 rounded-sm p-1">
+        <button onClick={toggleTheme} className="bg-transparent cursor-pointer focus:outline-none hover:ring-2 hover:ring-light-accent/80 rounded-sm p-1">
           {isDarkMode ? (
             // Night icon SVG
             <svg
