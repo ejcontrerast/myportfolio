@@ -3,17 +3,29 @@ import React from 'react';
 
 const Hello: React.FC = () => {
   return (
-    <section id="hello" className="flex items-center justify-center text-center sm:h-3/4 max-h-screen px-5 gap-10
+    <section id="hello" className="flex items-center justify-center text-center sm:h-3/5 md:h-1/2 max-h-screen px-5 gap-10
                                   dark:bg-dark-background bg-light-background bg-custompattern">
       {/* Text + buttons */}
       <div className='flex flex-col gap-6 py-6 mt-20'>
 
         {/* Text */}
         <div className='dark:text-dark-primary text-light-primary'>
-          <h1 className="text-4xl font-bold dark:text-dark-secondary text-light-secondary pb-3">
-            Hello! Welcome to my portfolio!
+          <h1 className="text-4xl font-bold
+            bg-gradient-to-tl
+            from-light-secondary
+            to-light-accent/80
+            bg-clip-text
+            text-transparent"
+          >
+            <text className="text-light-primary break-before-auto">
+              {'Hello! '}  
+            </text>
+            Welcome to my portfolio!
           </h1>
-          <p className="text-lg dark:text-dark-primary text-light-primary px-2 sm:px-6 md:px-20 lg:px-52 2xl:px-72"><p>I’m Ernesto, and am excited to share my journey in IT, web development, and data analytics with you. Take a look around to discover my projects, skills, and vision for creating impactful technology solutions.</p>
+          <p className="text-lg dark:text-dark-primary text-light-secondary px-2 sm:px-6 md:px-20 lg:px-52 2xl:px-72">
+            <p>
+              I’m Ernesto, and am excited to share my journey in IT, web development, and data analytics with you. Take a look around to discover my projects, skills, and vision for creating impactful technology solutions.
+            </p>
             Thanks for stopping by!
           </p>
         </div>
