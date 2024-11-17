@@ -21,7 +21,8 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 z-50 shadow-lg w-full flex justify-between items-center p-3 dark:bg-dark-background bg-light-background dark:bg-opacity-60 backdrop-blur-sm sm:px-10 lg:px-16 2xl:px-24">
+    <nav className="fixed top-0 z-50 shadow-lg w-full flex justify-between items-center p-3 
+                  dark:bg-dark-background bg-light-background dark:bg-opacity-60 bg-opacity-60 backdrop-blur-sm sm:px-10 lg:px-16 2xl:px-24">
       {/* Logo Section */}
       <Link to="hello" smooth={true} offset={-70} className="cursor-pointer">
         <div className="font-thin flex  dark:text-dark-accent text-light-accent">
