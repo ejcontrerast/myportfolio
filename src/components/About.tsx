@@ -4,7 +4,7 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="flex flex-row items-center justify-center sm:h-3/5 max-h-screen
+      className="flex flex-row items-center justify-center sm:h-3/5 max-h-screen h-1/2
       px-5 sm:px-10 md:px-20 lg:px-30 xl:px-50 2xl:70 py-30 sm:py-20 md:py-20
       dark:bg-gradient-to-b dark:from-dark-background dark:to-dark-secondary
       bg-gradient-to-t from-[#c0e0e0] via-light-additional to-light-background"

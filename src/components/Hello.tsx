@@ -3,7 +3,7 @@ import React from 'react';
 
 const Hello: React.FC = () => {
   return (
-    <section id="hello" className="flex items-center justify-center text-center sm:h-3/5 md:h-1/2 max-h-screen px-5 gap-10
+    <section id="hello" className="flex items-center justify-center text-center sm:h-3/5 md:h-1/2 max-h-screen h-3/4 px-5 gap-10
                                   dark:bg-dark-background bg-light-background bg-custompattern">
       {/* Text + buttons */}
       <div className='flex flex-col gap-6 py-6 mt-20'>
