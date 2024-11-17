@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 // https://www.youtube.com/watch?v=vIBKSmWAdIA&t=36s
 
-
 const Navbar: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark mode
 
@@ -21,7 +20,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 z-50 shadow-lg w-full flex justify-between items-center p-3 
+    <nav className="fixed top-0 z-50 shadow-md w-full flex justify-between items-center p-3 
                   dark:bg-dark-background bg-light-background dark:bg-opacity-60 bg-opacity-60 backdrop-blur-sm sm:px-10 lg:px-16 2xl:px-24">
       {/* Logo Section */}
       <Link to="hello" smooth={true} offset={-70} className="cursor-pointer">
