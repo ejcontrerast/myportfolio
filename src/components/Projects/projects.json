@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "title": "Project One",
+      "description": "A brief description of the first project.",
+      "frameworks": ["React", "Typescript", "Nodejs"],
+      "image": "https://via.placeholder.com/300",
+      "link": "https://example.com/project-one",
+      "github": "https://example.com/project-one"
+    },
+    {
+      "id": 2,
+      "title": "Project Two",
+      "frameworks": ["React", "Typescript", "Nodejs"],
+      "description": "A brief description of the second project.",
+      "image": "https://via.placeholder.com/300",
+      "link": "https://example.com/project-two",
+      "github": "https://example.com/project-one"
+    },
+    {
+      "id": 3,
+      "title": "Project Three",
+      "frameworks": ["React", "Typescript", "Nodejs"],
+      "description": "A brief description of the third project.",
+      "image": "https://via.placeholder.com/300",
+      "link": "https://example.com/project-three",
+      "github": "https://example.com/project-one"
+    },
+    {
+      "id": 4,
+      "title": "Project Four",
+      "description": "A brief description of the fourth project.",
+      "frameworks": ["React", "Typescript", "Nodejs"],
+      "image": "https://via.placeholder.com/300",
+      "link": "https://example.com/project-three",
+      "github": "https://example.com/project-one"
+    }
+]

@@ -3,6 +3,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/swiper/**/*.{js,ts}"
   ],
   darkMode: 'class', // Enable dark mode using a CSS class
   theme: {
