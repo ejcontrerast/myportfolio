@@ -78,8 +78,8 @@ const Skills: React.FC = () => {
     >
       <h2
         className="text-4xl font-extrabold text-center  mb-6
-        bg-gradient-to-br
-        from-light-secondary
+        bg-gradient-to-b outline-2 outline-dark-accent
+        from-light-primary
         to-light-accent
         bg-clip-text
         text-transparent"
@@ -91,7 +91,7 @@ const Skills: React.FC = () => {
         {skillCategories.map((category) => (
           <div key={category.category}>
             <h3 className="text-2xl font-semibold text-center 
-            text-light-primary dark:text-dark-primary mb-6">
+            text-light-primary dark:text-dark-accent mb-6">
               {category.category}
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
