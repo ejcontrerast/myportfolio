@@ -78,13 +78,13 @@ const Skills: React.FC = () => {
     >
       <h2
         className="text-4xl font-extrabold text-center  mb-6
-        bg-gradient-to-b outline-2 outline-dark-accent
-        from-light-primary
+        bg-gradient-to-tl outline-2
+        from-light-primary/20
         to-light-accent
         bg-clip-text
         text-transparent"
       >
-        My Skills
+        Skills
       </h2>
 
       <div className="space-y-12 max-w-6xl w-full">
