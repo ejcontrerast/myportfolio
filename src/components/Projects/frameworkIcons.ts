@@ -10,6 +10,5 @@ export const frameworkIcons: { [key: string]: React.ElementType } = {
   JS: BiLogoJavascript,
   Java: BiLogoJava,
   Nodejs: BiLogoNodejs,
-  linkexternal: BiLinkExternal
 };
 

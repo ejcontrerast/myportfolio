@@ -63,22 +63,29 @@ const Projects: React.FC = () => {
             .map((project, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 min-w-1/3 justify-center items-center bg-white shadow-lg rounded-lg p-4 transform transition-transform hover:scale-105"
+                className="flex-shrink-0 min-w-1/3 justify-center items-center 
+                dark:bg-dark-additional bg-light-additional dark:bg-opacity-60 bg-opacity-60 backdrop-blur-smhite 
+                shadow-lg rounded-lg p-4 
+                transform transition-transform hover:scale-105"
               >
                 <img
                   src={project.image}
                   alt={project.title}
                   className="h-40 w-full object-cover rounded"
                 />
-                <h3 className="text-xl font-semibold mt-4">{project.title}</h3>
-                <p className="text-gray-600 mt-2">{project.description}</p>
+                <h3 className="dark:text-dark-secondary text-light-primary text-xl font-semibold mt-4">
+                  {project.title}
+                </h3>
+                <p className="dark:text-dark-primary text-light-secondary mt-2">
+                  {project.description}
+                </p>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {(project.frameworks ?? []).map((framework, idx) => {
                     const IconComponent = frameworkIcons[framework];
                     return IconComponent ? (
                       <span
                         key={idx}
-                        className="flex items-center bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded"
+                        className="flex items-center dark:text-dark-primary text-light-secondary"
                       >
                         <IconComponent className="mr-1" size={20}/>
                       </span>
@@ -92,17 +99,17 @@ const Projects: React.FC = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-500 mt-4 inline-block hover:underline"
+                    className="text-dark-accent mt-2 inline-block hover:text-dark-accent/50"
                   >
-                    <BiLinkExternal className=" text-gray-800" size={35}/>
+                    <BiLinkExternal size={35}/>
                   </a>
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-500 mt-4 inline-block hover:underline"
+                    className="text-dark-accent mt-2 inline-block hover:text-dark-accent/50"
                   >
-                    <BiLogoGithub className="  text-gray-800" size={35}/>
+                    <BiLogoGithub size={35}/>
                   </a>
                 </div>
               </div>
@@ -119,7 +126,7 @@ const Projects: React.FC = () => {
         </button>
       </div>
 
-      <div className="text-center mt-4">
+      <div className="dark:text-dark-secondary text-light-primary text-center mt-4">
         <span>
           {Math.ceil((currentIndex + 1) / visibleProjects)}/
           {Math.ceil(projectData.length / visibleProjects)}
