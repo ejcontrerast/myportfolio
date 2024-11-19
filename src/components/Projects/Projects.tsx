@@ -3,6 +3,9 @@ import projectData from "./projects.json";
 import { frameworkIcons } from "./frameworkIcons"; // Import the icon map
 import {BiLogoGithub} from "react-icons/bi"
 import {BiLinkExternal} from "react-icons/bi"
+import { BsArrowLeftSquare } from "react-icons/bs";
+import { BsArrowRightSquare } from "react-icons/bs";
+
 
 const Projects: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,15 +33,29 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section className="py-12 bg-gray-100">
-      <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
+    <section className="flex  flex-col items-center justify-center text-center 
+    h-screen sm:h-3/5 md:h-4/6 px-5 gap-10
+    dark:bg-dark-background bg-light-background bg-custompattern">
+
+      <h2 className="text-4xl font-bold mb-3
+            bg-gradient-to-tl
+            from-light-secondary
+            to-light-accent/80
+            bg-clip-text
+            text-transparent"
+      >
+       Projects
+      </h2>
+
       <div className="relative flex items-center justify-center">
         <button
           onClick={handlePrev}
           aria-label="Previous projects"
-          className="absolute left-0 z-10 bg-gray-800 text-white p-3 rounded-full hover:bg-gray-700 transition"
+          className="absolute -left-14 z-10
+          bg-transparent text-dark-accent
+          hover:text-dark-accent/60 transition"
         >
-          &lt;
+          <BsArrowLeftSquare size={36}/>
         </button>
         <div className="flex overflow-hidden space-x-4 w-full">
           {projectData
@@ -94,11 +111,14 @@ const Projects: React.FC = () => {
         <button
           onClick={handleNext}
           aria-label="Next projects"
-          className="absolute right-0 z-10 bg-gray-800 text-white p-3 rounded-full hover:bg-gray-700 transition"
+          className="absolute -right-14 z-10 
+          bg-transparent text-dark-accent
+          hover:text-dark-accent/60 transition"
         >
-          &gt;
+          <BsArrowRightSquare size={36}/>
         </button>
       </div>
+
       <div className="text-center mt-4">
         <span>
           {Math.ceil((currentIndex + 1) / visibleProjects)}/
