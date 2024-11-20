@@ -22,15 +22,8 @@ const About: React.FC = () => {
         >
           About Me
         </h2>
-        <div className="flex flex-row">
-          {/* Photo */}
-          <div className="rounded-full overflow-hidden shadow-lg md:block hidden w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48">
-            <img
-              src="src/assets/Photo.png"
-              alt="Profile"
-              className="w-full h-full object-cover"
-            />
-          </div>
+        <div className="flex">
+
           { /* Paragraph */}
           <div className='mt-6'>
             <p className="text-lg leading-relaxed max-w-3xl mx-auto px-2">
@@ -44,6 +37,16 @@ const About: React.FC = () => {
               to innovative projects that make a difference. My portfolio showcases my dedication 
               to clean code, performance optimization, and delivering exceptional user experiences.
             </p>
+          </div>
+          {/* Photo */}
+          <div className="items-center justify-center rounded-full overflow-hidden mt-6 shadow-dark-accent drop-shadow-lg md:block hidden 
+                          w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+              style={{ filter: 'drop-shadow(4px 4px 6px rgb(38 218 138 / 0.8))' }}>
+            <img
+              src="src/assets/Photo.png"
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>

@@ -18,14 +18,14 @@ const Hello: React.FC = () => {
             bg-clip-text
             text-transparent"
           >
-            <text className="text-light-primary break-before-auto">
-              {'Hello! '}  
+            <text className="text-light-primary text-xl break-before-auto block">
+              Hello! 
             </text>
             Welcome to my portfolio!
           </h1>
           <p className="text-lg dark:text-dark-primary text-light-secondary px-2 sm:px-6 md:px-20 lg:px-52 2xl:px-72">
             <p>
-              I’m Ernesto, and am excited to share my journey in IT, web development, and data analytics with you. Take a look around to discover my projects, skills, and vision for creating impactful technology solutions.
+              Am excited to share my journey in web development, and data analytics with you. Take a look around to discover my projects, skills, and vision for creating impactful technology solutions.
             </p>
             Thanks for stopping by!
           </p>
