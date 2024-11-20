@@ -172,8 +172,9 @@ const Projects: React.FC = () => {
 
   return (
     <section
+      id="projects"
       className=" 
-      w-screen h-screen 2xl:px-35 shadow-md
+      h-4/6 2xl:px-35 shadow-md
       dark:bg-dark-background bg-light-background bg-custompattern"
     >
       <div className="flex flex-col items-center justify-center">
@@ -185,7 +186,7 @@ const Projects: React.FC = () => {
           Projects
         </h2>
         
-        <div className="w-5/6 h-dvh">
+        <div className="w-5/6">
           <Slider {...settings}>
             {projectData.map((project, idx) => (
               <ProjectCard key={idx} {...project} />

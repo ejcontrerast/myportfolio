@@ -6,8 +6,7 @@ const About: React.FC = () => {
       id="about"
       className="flex flex-row items-center justify-center sm:h-1/2 h-screen w-auto
       px-5 sm:px-10 md:px-20 lg:px-30 xl:px-50 2xl:70 py-30 sm:py-20 md:py-20
-      dark:bg-gradient-to-b dark:from-dark-background dark:to-dark-secondary
-      bg-gradient-to-t from-[#c0e0e0] via-light-additional to-light-background"
+      dark:bg-dark-background bg-light-background bg-custompattern"
     >
 
       {/* Text */}
