@@ -18,21 +18,21 @@ const Contact: React.FC = () => {
 
       <div className="mt-6 flex justify-center gap-6">
         <a
-          href="mailto:your.email@example.com"
+          href="mailto:ejcontrerast@outlook.com"
           aria-label="Send me an email"
           className="text-dark-accent hover:text-dark-secondary transition-transform transform hover:scale-110"
         >
           <FaEnvelope size={30} />
         </a>
         <a
-          href="https://github.com/your-profile"
+          href="https://github.com/ejcontrerast"
           aria-label="Visit my GitHub profile"
           className="text-dark-accent hover:text-dark-secondary transition-transform transform hover:scale-110"
         >
           <FaGithub size={30} />
         </a>
         <a
-          href="https://linkedin.com/in/your-profile"
+          href="www.linkedin.com/in/ejcontrerast"
           aria-label="Visit my LinkedIn profile"
           className="text-dark-accent hover:text-dark-secondary transition-transform transform hover:scale-110"
         >

@@ -25,27 +25,27 @@ const About: React.FC = () => {
 
           { /* Paragraph */}
           <div className='flex flex-col mt-6'>
-            <div className='mt-1 dark:text-dark-primary text-light-primary'>
+            <div className='mt-1 dark:text-dark-primary text-light-secondary'>
               <p className="text-lg leading-relaxed max-w-3xl mx-auto px-2 text-left ">
                 As a 
-                <span className="dark:text-dark-secondary text-light-secondary"> front-end developer </span> 
+                <span className="dark:text-dark-secondary text-light-primary font-semibold"> front-end developer </span> 
                 passionate about creating responsive, user-friendly web applications with modern tools like 
-                <span className="dark:text-dark-secondary text-light-secondary"> HTML, CSS, JavaScript, React, </span> and 
-                <span className="dark:text-dark-secondary text-light-secondary"> Tailwind. </span> 
+                <span className="dark:text-dark-secondary text-light-primary font-semibold"> HTML, CSS, JavaScript, React, </span> and 
+                <span className="dark:text-dark-secondary text-light-primary font-semibold"> Tailwind. </span> 
                 My understanding of back-end technologies, including 
-                <span className="dark:text-dark-secondary text-light-secondary0"> Node.js </span> 
+                <span className="dark:text-dark-secondary text-light-primary font-semibold"> Node.js </span> 
                 and databases, enhances my ability to collaborate on full-stack projects.
               </p>
             </div>
             <div className="text-left px-2 mt-2 gap-2 leading-relaxed">
-              <p className="text-lg dark:text-dark-primary text-light-primary">
-                💻 <span className="text-white font-semibold">Specialties:</span> Front-end development, UI/UX integration
+              <p className="text-lg dark:text-dark-primary text-light-secondary">
+                💻 <span className="dark:text-dark-primary text-light-secondary font-semibold">Specialties:</span> Front-end development, UI/UX integration
               </p>
-              <p className="text-lg dark:text-dark-primary text-light-primary">
-                🎯 <span className="text-white font-semibold">Passion:</span> Crafting clean, scalable code and engaging interfaces
+              <p className="text-lg dark:text-dark-primary text-light-secondary">
+                🎯 <span className="dark:text-dark-primary text-light-secondary font-semibold">Passion:</span> Crafting clean, scalable code and engaging interfaces
               </p>
-              <p className="text-lg dark:text-dark-primary text-light-primary">
-                🚀 <span className="text-white font-semibold">Collaboration:</span> Excelling in team-oriented, innovative environments
+              <p className="text-lg dark:text-dark-primary text-light-secondary">
+                🚀 <span className="dark:text-dark-primary text-light-secondary font-semibold">Collaboration:</span> Excelling in team-oriented, innovative environments
               </p>
             </div>
           </div>

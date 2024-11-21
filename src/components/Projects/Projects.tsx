@@ -65,7 +65,7 @@ const ProjectCard: React.FC<Project> = ({
             </div>
           </div>
           {/* Description */}
-          <p className="dark:text-dark-primary text-light-secondary mt-2">
+          <p className="dark:text-dark-primary text-light-secondary mt-2 text-sm">
             {description}
           </p>
 
