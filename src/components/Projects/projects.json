@@ -1,12 +1,12 @@
 [
     {
       "id": 1,
-      "title": "Project One",
-      "description": "A brief description of the first project.",
-      "frameworks": ["", "Typescript", "Nodejs"],
-      "image": "https://via.placeholder.com/300",
-      "link": "https://example.com/project-one",
-      "github": "https://example.com/project-one"
+      "title": "Old Portfolio",
+      "description": "This is my first website, developed for the COSC 219 course at Okanagan College. It features sections like Form Validation, AJAX, and my resume.",
+      "frameworks": ["HTML", "CSS", "PHP", "JS"],
+      "image": "src/assets/OldWebsite.png",
+      "link": "https://ejcontrerast.github.io/oldportfolio/",
+      "github": "https://github.com/ejcontrerast/oldportfolio"
     },
     {
       "id": 2,

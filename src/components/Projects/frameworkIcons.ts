@@ -1,8 +1,9 @@
-import { BiLogoReact, BiLogoTailwindCss, BiLogoGithub, BiLogoTypescript, BiLogoMongodb, BiLogoPython, BiLogoJavascript, BiLogoJava, BiLogoNodejs, BiSolidFileCss,BiSolidFileHtml} from "react-icons/bi";
+import { BiLogoReact, BiLogoTailwindCss, BiLogoGithub, BiLogoTypescript, BiLogoMongodb, BiLogoPython, BiLogoJavascript, BiLogoJava, BiLogoNodejs, BiSolidFileCss,BiSolidFileHtml, BiLogoPhp} from "react-icons/bi";
 
 export const frameworkIcons: { [key: string]: React.ElementType } = {
   CSS: BiSolidFileCss,
   HTML: BiSolidFileHtml,
+  PHP: BiLogoPhp,
   React: BiLogoReact,
   Tailwind: BiLogoTailwindCss,
   Github: BiLogoGithub,

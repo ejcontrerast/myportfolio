@@ -38,7 +38,7 @@ const ProjectCard: React.FC<Project> = ({
       <img
         src={image}
         alt={title}
-        className="h-56 w-full object-cover rounded flex justify-center"
+        className="h-56 w-full object-cover rounded-t flex justify-center"
       />
     </div>
 
@@ -55,7 +55,7 @@ const ProjectCard: React.FC<Project> = ({
               {frameworks.map((framework) => {
                 const IconComponent = frameworkIcons[framework];
                 return IconComponent ? (
-                  <span key={framework} className="flex items-center dark:text-dark-primary text-light-secondary">
+                  <span key={framework} className="flex items-center dark:text-dark-primary text-light-secondary dark:fill-dark-primary fill-light-secondary">
                     <IconComponent className="mr-1" size={20} />
                   </span>
                 ) : (
