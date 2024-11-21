@@ -4,7 +4,7 @@ import React from 'react';
 const Hello: React.FC = () => {
   return (
     <section id="hello" className="flex items-center justify-center text-center 
-    h-5/6 sm:h-3/5 md:h-1/2 px-5 gap-10
+    h-screen sm:h-3/5 md:h-1/2 px-5 gap-10
     dark:bg-dark-background bg-light-background bg-custompattern">
       {/* Text + buttons */}
       <div className='flex flex-col gap-6 py-6 mt-20'>
@@ -25,7 +25,7 @@ const Hello: React.FC = () => {
           </h1>
           <p className="text-lg dark:text-dark-primary text-light-secondary px-2 sm:px-6 md:px-20 lg:px-52 2xl:px-72">
             <p>
-              Am excited to share my journey in web development, and data analytics with you. Take a look around to discover my projects, skills, and vision for creating impactful technology solutions.
+              Am excited to share my journey in web development, and data analytics with you. Take a look around to discover my projects, skills, and vision for creating technology solutions.
             </p>
             Thanks for stopping by!
           </p>

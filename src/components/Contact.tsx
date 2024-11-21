@@ -6,7 +6,7 @@ const Contact: React.FC = () => {
     <section
       id="contact"
       className="h-1/3 p-8 flex flex-col justify-center items-center
-       bg-gray-50 dark:bg-dark-background bg-custompattern"
+       bg-light-background dark:bg-dark-background bg-custompattern"
     >
       <h2 className="text-3xl font-bold bg-gradient-to-tl from-light-secondary to-light-accent/80
           bg-clip-text text-transparent">

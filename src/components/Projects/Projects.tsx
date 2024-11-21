@@ -28,9 +28,9 @@ const ProjectCard: React.FC<Project> = ({
 }) => (
   <div
     className={`
-      h-auto m-2 relative max-w-80
+      h-auto s: m-4 relative max-w-80
       dark:bg-dark-additional/50 bg-light-background dark:bg-opacity-80 bg-opacity-90 
-      backdrop-blur-lg shadow-md rounded-lg transform transition-transform hover:scale-100
+      backdrop-blur-lg shadow-md rounded-lg transform transition-transform hover:scale-105
     `}
   >
     {/* Image */}
@@ -174,7 +174,7 @@ const Projects: React.FC = () => {
     <section
       id="projects"
       className=" 
-      h-4/6 2xl:px-35 shadow-md
+      h-screen sm:h-4/6 2xl:px-35 shadow-md
       dark:bg-dark-background bg-light-background bg-custompattern"
     >
       <div className="flex flex-col items-center justify-center">
