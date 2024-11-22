@@ -23,7 +23,7 @@ const Hello: React.FC = () => {
             </text>
             Welcome to my portfolio!
           </h1>
-          <p className="text-lg dark:text-dark-primary text-light-secondary px-2 sm:px-6 md:px-20 lg:px-52 2xl:px-72">
+          <p className="text-lg dark:text-dark-primary text-light-secondary px-2 sm:px-6 md:px-20 lg:px-52 2xl:px-96">
             <p>
               Am excited to share my journey in web development, and data analytics with you. Take a look around to discover my projects, skills, and vision for creating technology solutions.
             </p>
