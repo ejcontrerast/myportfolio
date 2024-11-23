@@ -189,8 +189,8 @@ const Projects: React.FC = () => {
         
         <div className="w-5/6">
           <Slider {...settings}>
-            {projectData.map((project, idx) => (
-              <ProjectCard key={idx} {...project} />
+            {projectData.map((project, id) => (
+              <ProjectCard key={id} {...project} />
             ))}
           </Slider>
         </div>

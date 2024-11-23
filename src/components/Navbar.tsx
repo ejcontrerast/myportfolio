@@ -3,7 +3,10 @@ import { Link } from 'react-scroll';
 // https://www.youtube.com/watch?v=vIBKSmWAdIA&t=36s
 
 const Navbar: React.FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark mode
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // Check the initial theme preference
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
@@ -15,9 +18,13 @@ const Navbar: React.FC = () => {
   };
 
   useEffect(() => {
-    // Set dark mode by default when the component mounts
-    document.documentElement.classList.add('dark');
-  }, []);
+    // Apply the initial theme preference
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
 
   return (
     <nav className="fixed top-0 z-50 shadow-md w-full flex justify-between items-center p-3 
@@ -156,7 +163,8 @@ const Navbar: React.FC = () => {
         </svg>
 
         {/* Theme Toggle Button */}
-        <button onClick={toggleTheme} className="bg-transparent cursor-pointer focus:outline-none hover:ring-2 hover:ring-light-accent/80 rounded-sm p-1">
+        <button onClick={toggleTheme} 
+        className="bg-transparent cursor-pointer focus:outline-none hover:ring-2 hover:ring-light-accent/80 rounded-sm p-1">
           {isDarkMode ? (
             // Night icon SVG
             <svg
