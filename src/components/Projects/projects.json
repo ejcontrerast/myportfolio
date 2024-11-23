@@ -1,21 +1,21 @@
 [
     {
       "id": 1,
-      "title": "Old Portfolio",
-      "description": "This is my first website, developed for the COSC 219 course at Okanagan College. It features sections like Form Validation, AJAX, and my resume.",
-      "frameworks": ["HTML", "CSS", "PHP", "JS"],
+      "title": "Previous Personal Portfolio",
+    "description":"Showcased form validation, AJAX, resume, LinkedIn integration, WordPress, and project displays, built with HTML, CSS, PHP, and JavaScript. Personal project for presenting technical skills and previous work.",
+    "frameworks": ["HTML", "CSS", "PHP", "JS"],
       "image": "src/assets/OldWebsite.png",
       "link": "https://ejcontrerast.github.io/oldportfolio/",
       "github": "https://github.com/ejcontrerast/oldportfolio"
     },
     {
       "id": 2,
-      "title": "Project Two",
-      "frameworks": ["React", "Typescript", "Nodejs"],
-      "description": "A brief description of the second project.",
-      "image": "https://via.placeholder.com/300",
-      "link": "https://example.com/project-two",
-      "github": "https://example.com/project-one"
+      "title": "Reservation System",
+      "description": "User authentication, account management, book search, and reservations, powered by a MySQL database and built using PHP, HTML, CSS, and JavaScript. Final project COSC213, in collaboration with Aslan Pereira. ",
+      "frameworks": ["HTML", "CSS", "JS", "PHP", "MySQL"],
+      "image": "src/assets/CourseProject.png",
+      "link": "https://green-porcupine-649633.hostingersite.com/",
+      "github": "https://github.com/ejcontrerast/courseproject"
     },
     {
       "id": 3,

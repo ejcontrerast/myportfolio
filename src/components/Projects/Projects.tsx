@@ -41,57 +41,58 @@ const ProjectCard: React.FC<Project> = ({
         className="h-56 w-full object-cover rounded-t flex justify-center"
       />
     </div>
-
     {/* Main Content */}
-    <div className="m-3 h-56">
+    <div className="m-3 h-56 max-w-[280px] ml-4">
         <div className="relative">
           <div className="flex flex-row items-center relative mt-5 mb-3">
             {/* Title */}
             <h3 className="dark:text-dark-secondary text-light-primary text-xl font-semibold">
               {title}
             </h3>
-            {/* Frameworks */}
-            <div className="flex flex-wrap gap-2 absolute right-0">
-              {frameworks.map((framework) => {
-                const IconComponent = frameworkIcons[framework];
-                return IconComponent ? (
-                  <span key={framework} className="flex items-center dark:text-dark-primary text-light-secondary dark:fill-dark-primary fill-light-secondary">
-                    <IconComponent className="mr-1" size={20} />
-                  </span>
-                ) : (
-                  <span key={framework} className="text-xs">{framework}</span>
-                );
-              })}
-            </div>
+          
           </div>
           {/* Description */}
           <p className="dark:text-dark-primary text-light-secondary mt-2 text-sm">
             {description}
           </p>
-
+        </div>
       </div>
 
-      {/* External Links */}
-      <div className="inline-block absolute bottom-0 left-0 m-3">
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-dark-accent mt-2 inline-block hover:text-dark-secondary"
-        >
-          <BiLinkExternal size={35} />
-        </a>
-        <a
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-dark-accent mt-2 inline-block hover:text-dark-secondary"
-        >
-          <BiLogoGithub size={35} />
-        </a>
+      <div className="flex relative ">
+          {/* External Links */}
+          <div className="inline-block absolute bottom-0 left-0 m-3">
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-dark-accent mt-2 inline-block hover:text-dark-secondary"
+            >
+              <BiLinkExternal size={35} />
+            </a>
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-dark-accent mt-2 inline-block hover:text-dark-secondary"
+            >
+              <BiLogoGithub size={35} />
+            </a>
+          </div>
+        </div>
+        {/* Frameworks */}
+        <div className="flex flex-wrap gap-2 absolute bottom-0 right-0 m-5">
+          {frameworks.map((framework) => {
+            const IconComponent = frameworkIcons[framework];
+            return IconComponent ? (
+              <span key={framework} className="flex items-center dark:text-dark-primary text-light-secondary dark:fill-dark-primary fill-light-secondary">
+                <IconComponent className="mr-1" size={23} />
+              </span>
+            ) : (
+              <span key={framework} className="text-xs">{framework}</span>
+            );
+          })}
+        </div>
       </div>
-    </div>
-  </div>
 );
 
 interface ArrowProps {
