@@ -31,10 +31,10 @@ const About: React.FC = () => {
                 <span className="dark:text-dark-secondary text-light-primary font-semibold"> front-end developer </span> 
                 passionate about creating responsive, user-friendly web applications with modern tools like 
                 <span className="dark:text-dark-secondary text-light-primary font-semibold"> HTML, CSS, JavaScript, React, </span> and 
-                <span className="dark:text-dark-secondary text-light-primary font-semibold"> Tailwind. </span> 
-                My understanding of back-end technologies, including 
+                <span className="dark:text-dark-secondary text-light-primary font-semibold"> Tailwind, </span> 
+                I bring an understanding of back-end technologies, including 
                 <span className="dark:text-dark-secondary text-light-primary font-semibold"> Node.js </span> 
-                and databases, enhances my ability to collaborate on full-stack projects.
+                and databases, which enhances my ability to contribute effectively on full-stack projects.
               </p>
             </div>
             <div className="text-left px-2 mt-2 gap-2 leading-relaxed">

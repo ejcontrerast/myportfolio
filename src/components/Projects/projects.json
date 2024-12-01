@@ -19,12 +19,12 @@
     },
     {
       "id": 3,
-      "title": "Project Three",
-      "frameworks": ["React", "Typescript", "Nodejs"],
-      "description": "A brief description of the third project.",
-      "image": "https://via.placeholder.com/300",
+      "title": "MineSweeper",
+      "frameworks": ["React", "Typescript", "TailwindCSS"],
+      "description": "Minesweeper game clean architecture, advanced game mechanics like real-time bomb counters, and recursive algorithms.",
+      "image": "src/assets/mineSweeper.png",
       "link": "https://example.com/project-three",
-      "github": "https://example.com/project-one"
+      "github": "https://github.com/ejcontrerast/minesweeper"
     },
     {
       "id": 4,
