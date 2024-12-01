@@ -4,7 +4,7 @@
       "title": "Previous Personal Portfolio",
     "description":"Showcased form validation, AJAX, resume, LinkedIn integration, WordPress, and project displays, built with HTML, CSS, PHP, and JavaScript. Personal project for presenting technical skills and previous work.",
     "frameworks": ["HTML", "CSS", "PHP", "JS"],
-      "image": "public/static/imagest/OldWebsite.png",
+      "image": "public/static/images/OldWebsite.png",
       "link": "https://hotpink-porcupine-332652.hostingersite.com/",
       "github": "https://github.com/ejcontrerast/oldportfolio"
     },
@@ -13,7 +13,7 @@
       "title": "Reservation System",
       "description": "User authentication, account management, book search, and reservations, powered by a MySQL database and built using PHP, HTML, CSS, and JavaScript. Final project COSC213, in collaboration with Aslan Pereira. ",
       "frameworks": ["HTML", "CSS", "JS", "PHP", "MySQL"],
-      "image": "public/static/imagest/CourseProject.png",
+      "image": "public/static/images/CourseProject.png",
       "link": "https://khaki-elk-552868.hostingersite.com/",
       "github": "https://github.com/ejcontrerast/courseproject"
     },
@@ -22,7 +22,7 @@
       "title": "MineSweeper",
       "frameworks": ["React", "Typescript", "Tailwind"],
       "description": "Minesweeper game clean architecture, advanced game mechanics like real-time bomb counters, and recursive algorithms.",
-      "image": "public/static/imagest/mineSweeper.png",
+      "image": "public/static/images/mineSweeper.png",
       "link": "https://example.com/project-three",
       "github": "https://github.com/ejcontrerast/minesweeper"
     },
