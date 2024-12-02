@@ -55,7 +55,7 @@ const About: React.FC = () => {
                           w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
               style={{ filter: 'drop-shadow(4px 4px 6px rgb(38 218 138 / 0.8))' }}>
             <img
-              src="src/assets/Photo.png"
+              src="/static/images/Photo.png"
               alt="Profile"
               className="w-full h-full object-cover"
             />
