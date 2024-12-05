@@ -1,5 +1,5 @@
 import React from 'react'
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 interface Props {
@@ -15,7 +15,7 @@ function ContactPopUp({trigger, setTrigger}: Props  ) {
         setResult("Sending....");
         const formData = new FormData(event.target as HTMLFormElement);
     
-        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+        formData.append("access_key", "5fd85473-bd76-4bd4-94d4-b01ebd39f964");
     
         const response = await fetch("https://api.web3forms.com/submit", {
           method: "POST",
@@ -25,31 +25,16 @@ function ContactPopUp({trigger, setTrigger}: Props  ) {
         const data = await response.json();
     
         if (data.success) {
-          setResult("Form Submitted Successfully");
           (event.target as HTMLFormElement).reset();
-            toast.success(result,{
-                position: "bottom-right",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark"
-            });
-          setTrigger(true);
+            toast.success("Form Submitted Successfully", {
+                position: "bottom-right"
+                });
+          setTrigger(false);
         } else {
           console.log("Error", data);
           setResult(data.message);
-          toast.success(result,{
-            position: "bottom-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark"
+          toast.success("Error", {
+            position: "bottom-right"
         });
         }
     };
@@ -67,9 +52,9 @@ function ContactPopUp({trigger, setTrigger}: Props  ) {
           <div className="dark:bg-dark-background bg-light-background dark:text-dark-accent text-light-accent p-8 rounded-lg shadow-lg max-w-md w-full">
             <h2 className="text-2xl font-bold text-primary mb-4">Let's work together!</h2>
             {/* Contact Form */}
-            <form onSubmit={() => onSubmit} >
+            <form onSubmit={onSubmit}>
               <div className="mb-4">
-                <label className="block font-medium dark:text-dark-primary text-light-secondary mb-2" htmlFor="name">Name</label>
+                <label className="block font-medium dark:text-dark-primary  text-light-secondary mb-2" htmlFor="name">Name</label>
                 <input 
                   type="text" 
                   id="name" 
@@ -105,7 +90,7 @@ function ContactPopUp({trigger, setTrigger}: Props  ) {
               <div className="flex justify-between">
                 <button 
                   type="button" 
-                  /* onClick={() => setTrigger(false)}  */
+                  onClick={() => setTrigger(false)}
                   className="dark:text-dark-secondary text-light-primary/90 hover:text-dark-accent hover:dark:text-dark-accent">
                   Close
                 </button>
@@ -115,7 +100,6 @@ function ContactPopUp({trigger, setTrigger}: Props  ) {
                   Send
                 </button>
               </div>
-              <ToastContainer />
             </form>
           </div>
         </div>

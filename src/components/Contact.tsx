@@ -3,6 +3,8 @@ import ContactPopUp from './ContactPopUp';
 import { FaGithubSquare , FaLinkedin } from 'react-icons/fa';
 import { FaSquareEnvelope } from "react-icons/fa6";
 import { SiImessage } from "react-icons/si";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Contact: React.FC = () => {
@@ -51,6 +53,11 @@ const Contact: React.FC = () => {
           <SiImessage size={28} />
         </button>
         <ContactPopUp trigger={trigger} setTrigger={setTrigger}/>
+        <ToastContainer 
+           toastClassName={() => 
+            "dark:bg-dark-background bg-light-background dark:text-dark-primary text-light-secondary dark:border-dark-accent border-light-accent shadow-sm p-4 relative flex p-1 min-h-10 rounded-md justify-between overflow-hidden cursor-pointer"
+          }
+        />
       </div>
     </section>
   );
