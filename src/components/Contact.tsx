@@ -52,13 +52,13 @@ const Contact: React.FC = () => {
         >
           <SiImessage size={28} />
         </button>
-        <ContactPopUp trigger={trigger} setTrigger={setTrigger}/>
+      </div>
+      <ContactPopUp trigger={trigger} setTrigger={setTrigger}/>
         <ToastContainer 
            toastClassName={() => 
             "dark:bg-dark-background bg-light-background dark:text-dark-primary text-light-secondary dark:border-dark-accent border-light-accent shadow-sm p-4 relative flex p-1 min-h-10 rounded-md justify-between overflow-hidden cursor-pointer"
           }
         />
-      </div>
     </section>
   );
 };
