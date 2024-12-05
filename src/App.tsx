@@ -3,7 +3,6 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hello from './components/Hello';
 import About from './components/About';
-import Skills from './components/Skills';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -16,7 +15,6 @@ const App: React.FC = () => {
       <Hello />
       <Projects />
       <About />
-      <Skills />
       <Contact />
       <Footer />
     </div>

@@ -1,22 +1,18 @@
 import React from 'react';
+import Skills from './Skills';
 
 const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="sm:h-1/2 h-screen w-auto
+      className="h-screen w-auto
       px-5 sm:px-10 md:px-20 lg:px-30 xl:px-50 2xl:70 py-30 sm:py-20 md:py-20
       dark:bg-dark-background bg-light-background bg-custompattern"
     >
 
       {/* Text */}
         <div className='flex text-center justify-center'>    
-          <h2 className="text-4xl font-bold
-              bg-gradient-to-tl
-              from-light-secondary
-              to-light-accent/80
-              bg-clip-text
-              text-transparent"
+          <h2 className="main-titles mt-28"
           >
             About Me
           </h2>
@@ -82,7 +78,8 @@ const About: React.FC = () => {
             Contact
           </a>
         </div>
-      
+
+        <Skills />
     </section>
   );
 };

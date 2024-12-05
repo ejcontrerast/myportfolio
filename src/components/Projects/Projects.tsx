@@ -28,7 +28,7 @@ const ProjectCard: React.FC<Project> = ({
 }) => (
   <div
     className={`
-      h-auto s: m-4 relative max-w-80
+      h-[480px] min-w-[300px] m-4 relative max-w-80
       dark:bg-dark-additional/50 bg-light-background dark:bg-opacity-80 bg-opacity-90 
       backdrop-blur-lg shadow-md rounded-lg transform transition-transform hover:scale-105
     `}
@@ -145,14 +145,14 @@ const Projects: React.FC = () => {
     ),
     responsive: [
       {
-        breakpoint: 1375,
+        breakpoint: 1500,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
         }
       },
       {
-        breakpoint: 1024,
+        breakpoint: 1100,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -161,7 +161,7 @@ const Projects: React.FC = () => {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -175,14 +175,12 @@ const Projects: React.FC = () => {
     <section
       id="projects"
       className=" 
-      h-screen sm:h-4/6 2xl:px-35 shadow-md
+      h-screen sm:h-5/6 2xl:px-35 shadow-md
       dark:bg-dark-background bg-light-background bg-custompattern"
     >
       <div className="flex flex-col items-center justify-center">
         <h2
-          className="text-4xl font-bold mb-3
-          bg-gradient-to-tl from-light-secondary to-light-accent/80
-          bg-clip-text text-transparent"
+          className="main-titles mt-10"
         >
           Projects
         </h2>

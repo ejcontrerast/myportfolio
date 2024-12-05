@@ -53,17 +53,6 @@ const Skills: React.FC = () => {
       className="flex flex-col items-center justify-center py-20 
       dark:bg-dark-background bg-light-background bg-custompattern overflow-hidden"
     >
-      <h2
-        className="text-4xl font-extrabold text-center mb-6
-        bg-gradient-to-tl outline-2
-        from-light-primary/20
-        to-light-accent
-        bg-clip-text
-        text-transparent"
-      >
-        Skills
-      </h2>
-
       <div className="w-full">
         <div className="flex space-x-8 overflow-hidden group">
           <div className="flex animate-loop-scroll space-x-8 grayscale hover:grayscale-0 group-hover:paused">

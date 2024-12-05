@@ -2,8 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
+@layer utilities {
   .paused {
     animation-play-state: paused;
   }
 }
+
+.btn-primary {
+  @apply px-3 py-2 font-medium border focus:ring-2
+  dark:focus:ring-dark-accent dark:bg-transparent dark:border-dark-accent/70 dark:text-dark-accent/70 dark:hover:bg-dark-accent/60 dark:hover:text-dark-primary 
+  focus:ring-light-accent bg-transparent border-light-secondary text-light-secondary hover:border-light-primary hover:bg-light-accent/80 hover:text-light-background
+  rounded-sm shadow-md;
+}
+
+.btn-secondary {
+  @apply px-3 py-2 font-medium border focus:ring-2
+  dark:focus:ring-dark-accent dark:bg-dark-accent dark:border-dark-secondary dark:text-dark-background dark:hover:bg-dark-secondary/60 dark:hover:text-dark-primary 
+  focus:ring-light-accent bg-light-accent border-light-accent text-light-secondary hover:border-light-accent hover:bg-light-primary hover:text-light-additional
+  rounded-sm shadow-md;
+}
+
+.main-titles {
+  @apply text-4xl font-bold mb-3
+  bg-gradient-to-tl
+  from-light-secondary
+  to-light-accent/80
+  bg-clip-text
+  text-transparent;
+  filter: drop-shadow(0.5px 0.5px 0.8px rgb(38, 218, 138));
+}
+
+
+.btns {
+  @apply dark:text-dark-accent text-light-primary 
+  hover:text-dark-accent dark:hover:text-light-primary
+  cursor-pointer transition-colors;
+}
+
+.btns-icons {
+  @apply cursor-pointer dark:fill-dark-accent fill-light-primary dark:hover:fill-dark-secondary hover:fill-light-accent;
+}
+
