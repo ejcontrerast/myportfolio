@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
         href="#top"
         aria-label="Back to top of the page"
         className="text-light-accent dark:text-dark-accent font-semibold 
-              transition-transform transform hover:scale-110 hover:underline dark:hover:text-dark-secondary hover:text-light-primary"
+              transition-transform transform hover:scale-110 hover:underline dark:hover:text-dark-secondary hover:text-light-secondary"
           >
         Back to Top
           </a>

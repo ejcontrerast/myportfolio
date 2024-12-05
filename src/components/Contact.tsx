@@ -5,6 +5,8 @@ import { FaSquareEnvelope } from "react-icons/fa6";
 import { SiImessage } from "react-icons/si";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip'
 
 
 const Contact: React.FC = () => {
@@ -13,18 +15,21 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="h-1/3 p-8 flex flex-col justify-center items-center
+      className="h-4/6 sm:h-5/6 md:h-1/2 lg:1/3 p-8 flex flex-col justify-center items-center
        bg-light-background dark:bg-dark-background bg-custompattern"
     >
       <h2 className="main-titles">
-        Contact
+      Let's work together!
       </h2>
       <p className="mt-4 text-lg text-light-secondary dark:text-dark-primary">
-        Let's work together!
+        Contact me:
       </p>
 
       <div className="mt-6 flex justify-center gap-6">
+      <Tooltip id="my-tooltip" />
         <a
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="Send me an email"
           href="mailto:ejcontrerast@outlook.com"
           aria-label="Send me an email"
           className="btns transition-transform transform hover:scale-110"
@@ -32,6 +37,8 @@ const Contact: React.FC = () => {
           <FaSquareEnvelope size={30} />
         </a>
         <a
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="My GitHub Profile"
           href="https://github.com/ejcontrerast"
           aria-label="Visit my GitHub profile"
           className="btns transition-transform transform hover:scale-110"
@@ -39,6 +46,8 @@ const Contact: React.FC = () => {
           <FaGithubSquare size={30} />
         </a>
         <a
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="My LinkedIn Profile"
           href="www.linkedin.com/in/ejcontrerast"
           aria-label="Visit my LinkedIn profile"
           className="btns transition-transform transform hover:scale-110"
@@ -46,6 +55,8 @@ const Contact: React.FC = () => {
           <FaLinkedin size={30} />
         </a>
         <button
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="Contact Form"
           onClick={() => setTrigger(true)}
           aria-label="Contact Form"
           className="btns mb-1 transition-transform transform hover:scale-110"
