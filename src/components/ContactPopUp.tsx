@@ -13,45 +13,45 @@ function ContactPopUp({trigger, setTrigger}: Props  ) {
     const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setResult("Sending....");
-        const formData = new FormData(event.currentTarget as unknown as HTMLFormElement);
-
-        formData.append("access_key", "5fd85473-bd76-4bd4-94d4-b01ebd39f964");
-
+        const formData = new FormData(event.target as HTMLFormElement);
+    
+        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    
         const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
+          method: "POST",
+          body: formData
         });
-
-        const data: { success: boolean; message: string } = await response.json();
-
+    
+        const data = await response.json();
+    
         if (data.success) {
-            setResult("Form Submitted Successfully");
-            event.currentTarget.reset();
-            /* setTrigger(false); */
-            toast.success( result , {
-                position: 'bottom-left',
-                autoClose: 3000,         
+          setResult("Form Submitted Successfully");
+          (event.target as HTMLFormElement).reset();
+            toast.success(result,{
+                position: "bottom-right",
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
-                draggable: false,                                                          
-                theme: 'dark',      
+                draggable: true,
+                progress: undefined,
+                theme: "dark"
             });
+          setTrigger(true);
         } else {
-            console.log("Error", data);
-            setResult(data.message);
-            toast.error( result , {
-                position: 'bottom-left',
-                autoClose: 3000,         
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: false,                                                          
-                theme: 'dark',      
-            });
+          console.log("Error", data);
+          setResult(data.message);
+          toast.success(result,{
+            position: "bottom-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark"
+        });
         }
-
-        
     };
 
     return (trigger) ? (
