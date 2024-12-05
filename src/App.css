@@ -8,19 +8,95 @@
   }
 }
 
-.btn-primary {
+/* .btn-primary {
   @apply px-3 py-2 font-medium border focus:ring-2
   dark:focus:ring-dark-accent dark:bg-transparent dark:border-dark-accent/70 dark:text-dark-accent/70 dark:hover:bg-dark-accent/60 dark:hover:text-dark-primary 
   focus:ring-light-accent bg-transparent border-light-secondary text-light-secondary hover:border-light-primary hover:bg-light-accent/80 hover:text-light-background
   rounded-sm shadow-md;
+} */
+
+.btn-primary {
+  @apply px-6 py-2 rounded-md
+  relative radial-gradient hover:dark:bg-dark-additional/60 hover:bg-light-additional/60
+}
+
+.btn-primary-text {
+  @apply dark:text-dark-accent text-light-primary 
+  tracking-wide font-light
+  h-full w-full block relative
+  linear-mask
+}
+
+:root {
+  --radial-gradient-background: 255, 255, 255; /* --radial-gradient-background */
+  --solid-color-background: #22323c07; /*  --solid-color-background */
+  --solid-color-background-secondary: 38, 218, 138 ; /*  --solid-color-background */
+  --overlay-color: 38, 218, 138; /*  --overlay-color */
+}
+
+.radial-gradient {
+  background: radial-gradient(
+          circle at 50% 0%,
+          rgba(var(--radial-gradient-background), 0.05) 0%,
+          transparent 60%
+      )
+      rgba(var(--solid-color-background), 1);
+}
+
+.radial-gradient-secondary {
+  background: radial-gradient(
+          circle at 50% 0%,
+          rgba(var(--radial-gradient-background), 0.05) 0%,
+          transparent 60%
+      )
+      rgba(var(--solid-color-background-secondary), 0.3);
+}
+
+.linear-mask {
+  mask-image: linear-gradient(
+      -75deg,
+      white calc(var(--x) + 20%),
+      transparent calc(var(--x) + 30%),
+      white calc(var(--x) + 100%)
+  );
+  -webkit-mask-image: linear-gradient(
+      -75deg,
+      white calc(var(--x) + 20%),
+      transparent calc(var(--x) + 30%),
+      white calc(var(--x) + 100%)
+  );
+}
+
+.linear-overlay {
+
+  background-image: linear-gradient(
+      -75deg,
+      rgba(var(--overlay-color), 0.5) calc(var(--x) + 20%),
+      rgba(var(--overlay-color), 2) calc(var(--x) + 25%),
+      rgba(var(--overlay-color), 0.1) calc(var(--x) + 100%)
+  );
+  mask:
+      linear-gradient(black, black) content-box,
+      linear-gradient(black, black);
+  -webkit-mask:
+      linear-gradient(black, black) content-box,
+      linear-gradient(black, black);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
 }
 
 .btn-secondary {
-  @apply px-3 py-2 font-medium border focus:ring-2
-  dark:focus:ring-dark-accent dark:bg-dark-accent dark:border-dark-secondary dark:text-dark-background dark:hover:bg-dark-secondary/60 dark:hover:text-dark-primary 
-  focus:ring-light-accent bg-light-accent border-light-accent text-light-secondary hover:border-light-accent hover:bg-light-primary hover:text-light-additional
-  rounded-sm shadow-md;
+  @apply px-6 py-2 rounded-md
+  relative radial-gradient-secondary dark:hover:bg-dark-secondary/60 hover:bg-light-accent/50
 }
+
+.btn-secondary-text {
+  @apply dark:text-dark-accent text-light-primary 
+  tracking-wide font-light
+  h-full w-full block relative
+  linear-mask
+}
+
 
 .main-titles {
   @apply text-4xl font-bold mb-3

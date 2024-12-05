@@ -1,5 +1,6 @@
 // src/components/Hello.tsx
 import React from 'react';
+import {motion} from 'framer-motion';
 
 const Hello: React.FC = () => {
   return (
@@ -26,21 +27,70 @@ const Hello: React.FC = () => {
           </p>
         </div>
 
-        {/* Buttons Resume and Projects*/}
+        {/* Button Resume*/}
         <div className="flex items-center justify-center space-x-4 ">
-          <a 
-            href="https://resume-seven-wine.vercel.app/"
-            download 
+          <motion.button
+            onClick={() => window.open("https://resume-seven-wine.vercel.app/")}
             className="btn-primary"
+            initial={{"--x": "100%", scale: 1}}
+            animate={{"--x": "-100%"}}
+            whileTap={{scale: 0.97}}
+            transition={{
+              repeat: Infinity,
+              repeatType: "loop",
+              repearDelay: 1,
+              type: "spring",
+              stiffness: 20,
+              damping: 15,
+              mass: 2,
+              scale:{
+                type: "spring",
+                stiffness: 10,
+                damping: 5,
+                mass: 0.1
+              }
+            }}
           >
+            <text
+            className="btn-primary-text"
+            >
             Resume   
-          </a>
-          <a 
-            href="#projects" 
+            </text>
+            <span
+             className="block absolute inset-0 rounded-md p-px linear-overlay"
+             />
+          </motion.button>
+
+          {/* Button Projects*/}
+          <motion.button
+            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             className="btn-secondary"
+            initial={{"--x": "100%", scale: 1}}
+            animate={{"--x": "-100%"}}
+            whileTap={{scale: 0.97}}
+            transition={{
+              repeat: Infinity,
+              repeatType: "loop",
+              repearDelay: 1,
+              type: "spring",
+              stiffness: 20,
+              damping: 15,
+              mass: 2,
+              scale:{
+                type: "spring",
+                stiffness: 10,
+                damping: 5,
+                mass: 0.1
+              }
+            }}
           >
-            Projects
-          </a>
+            <text
+              className="btn-secondary-text"
+            >Projects</text>
+            <span
+             className="block absolute inset-0 rounded-md p-px linear-overlay"
+             />
+          </motion.button>
         </div>
       </div>
     </section>
