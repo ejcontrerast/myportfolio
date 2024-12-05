@@ -1,7 +1,13 @@
 import React from 'react';
-import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import ContactPopUp from './ContactPopUp';
+import { FaGithubSquare , FaLinkedin } from 'react-icons/fa';
+import { FaSquareEnvelope } from "react-icons/fa6";
+import { SiImessage } from "react-icons/si";
+
 
 const Contact: React.FC = () => {
+  const [trigger, setTrigger] = React.useState(false);
+
   return (
     <section
       id="contact"
@@ -21,14 +27,14 @@ const Contact: React.FC = () => {
           aria-label="Send me an email"
           className="btns transition-transform transform hover:scale-110"
         >
-          <FaEnvelope size={30} />
+          <FaSquareEnvelope size={30} />
         </a>
         <a
           href="https://github.com/ejcontrerast"
           aria-label="Visit my GitHub profile"
           className="btns transition-transform transform hover:scale-110"
         >
-          <FaGithub size={30} />
+          <FaGithubSquare size={30} />
         </a>
         <a
           href="www.linkedin.com/in/ejcontrerast"
@@ -37,6 +43,14 @@ const Contact: React.FC = () => {
         >
           <FaLinkedin size={30} />
         </a>
+        <button
+          onClick={() => setTrigger(true)}
+          aria-label="Contact Form"
+          className="btns mb-1 transition-transform transform hover:scale-110"
+        >
+          <SiImessage size={28} />
+        </button>
+        <ContactPopUp trigger={trigger} setTrigger={setTrigger}/>
       </div>
     </section>
   );
