@@ -13,6 +13,7 @@ import gitIcon from '../assets/logos/git.svg';
 import githubIcon from '../assets/logos/github.svg';
 import figmaIcon from '../assets/logos/figma.svg';
 import vscodeIcon from '../assets/logos/vscode.svg';
+import supabase from '../assets/logos/supabase.svg';
 import '../App.css';
 
 type SkillProps = {
@@ -43,6 +44,7 @@ const Skills: React.FC = () => {
     { name: 'Figma', icon: figmaIcon },
     { name: 'Git', icon: gitIcon },
     { name: 'GitHub', icon: githubIcon },
+    { name: 'Supabase', icon: supabase },
   ];
 
   const loopedSkills = Array(3).fill(skills).flat();

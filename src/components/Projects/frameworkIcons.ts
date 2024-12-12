@@ -1,4 +1,5 @@
 import { BiLogoReact, BiLogoTailwindCss, BiLogoGithub, BiLogoTypescript, BiLogoMongodb, BiLogoPython, BiLogoJavascript, BiLogoJava, BiLogoNodejs, BiSolidFileCss,BiSolidFileHtml, BiLogoPhp} from "react-icons/bi";
+import { RiSupabaseLine } from "react-icons/ri";
 import { SiMysql } from "react-icons/si";
 
 export const frameworkIcons: { [key: string]: React.ElementType } = {
@@ -15,5 +16,6 @@ export const frameworkIcons: { [key: string]: React.ElementType } = {
   Java: BiLogoJava,
   Nodejs: BiLogoNodejs,
   MySQL: SiMysql,
+  Supabase: RiSupabaseLine,
 };
 
