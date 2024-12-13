@@ -9,14 +9,14 @@
 }
 
 .btn-primary {
-  @apply px-6 py-2 rounded-md
-  relative radial-gradient hover:dark:bg-dark-additional/60 hover:bg-light-additional/60;
+  @apply px-6 py-2 rounded-md relative 
+  radial-gradient hover:dark:bg-dark-additional/60 hover:bg-light-additional/60;
 }
 
 .btn-primary-text {
   @apply dark:text-dark-accent text-light-primary 
-  tracking-wide font-light
-  h-full w-full block relative
+  tracking-wide 
+  font-semibold h-full w-full block relative
   linear-mask;
 }
 
@@ -81,7 +81,7 @@
 
 .btn-secondary-text {
   @apply dark:text-dark-accent text-light-primary 
-  tracking-wide font-light
+  tracking-wide font-semibold
   h-full w-full block relative
   linear-mask;
 }
