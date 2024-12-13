@@ -23,7 +23,7 @@ type SkillProps = {
 
 const Skill: React.FC<SkillProps> = ({ name, icon }) => (
   <div className="flex flex-col items-center justify-center transition-transform transform hover:scale-110 p-2">
-    <img src={icon} alt={`${name} logo`} className="h-7 mb-2" />
+    <img src={icon} alt={`${name} logo`} className="h-7 w-7 object-contain mb-2" />
     <span className="text-sm font-medium dark:text-dark-primary text-light-primary">{name}</span>
   </div>
 );

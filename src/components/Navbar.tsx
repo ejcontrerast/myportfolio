@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
+import { ReactComponent as Logo } from '../assets/eclogo.svg';
+import { ReactComponent as LogoName } from '../assets/namelogo.svg';
 // https://www.youtube.com/watch?v=vIBKSmWAdIA&t=36s
 
 const Navbar: React.FC = () => {
@@ -32,104 +34,10 @@ const Navbar: React.FC = () => {
       {/* Logo Section */}
       <Link to="hello" smooth={true} offset={-70} className="cursor-pointer">
         <div className="font-thin flex dark:fill-dark-accent fill-light-primary">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 190 110"
-            className="w-auto h-8"
-          >
-            {/* Left Angle Bracket */}
-            <text
-              x="20"
-              y="85"
-              fontSize="100"
-              fontFamily="Algerian"
-              transform="scale(0.72 1.4)"
-            >
-              &lt;
-            </text>
-
-            {/* "e" Letter */}
-            <text
-              x="72"
-              y="95"
-              fontSize="230"
-              fontFamily="Freestyle Script"
-              transform="scale(0.88 1.13)"
-            >
-              e
-            </text>
-
-            {/* "c" Letter */}
-            <text
-              x="121"
-              y="92"
-              fontSize="225"
-              fontFamily="Freestyle Script"
-              transform="scale(0.89 1.13)"
-            >
-              c
-            </text>
-
-            {/* Right Angle Bracket */}
-            <text
-              x="200"
-              y="85"
-              fontSize="100"
-              fontFamily="Algerian"
-              transform="scale(0.75 1.34)"
-            >
-              &gt;
-            </text>
-          </svg>
-
-
-        {/* Logo - Ernesto Contreras */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 140 50"
-            className="w-auto h-8 dark:text-dark-accent text-light-primary sm:block hidden"
-          >
-            {/* ERNESTO Text */}
-            <text
-              className="fill-current"
-              style={{
-                fontSize: '22px', // Matches original size.
-                textAnchor: 'start', // Aligns text to start from x coordinate.
-              }}
-            >
-              <tspan
-                x="4"
-                y="24"
-                style={{
-                  fontFamily: 'sans-serif', // Myanmar Text with fallback.
-                  fontWeight: 400,
-                }}
-              >
-                ERNESTO
-              </tspan>
-            </text>
-
-            {/* CONTRERAS Text */}
-            <text
-              className="fill-current"
-              style={{
-                fontSize: '23px', // Matches original size.
-                textAnchor: 'start', // Aligns text to start.
-                transform: 'scale(0.86, 1.16)', // Applies scaling transformation.
-              }}
-            >
-              <tspan
-                x="5"
-                y="38"
-                style={{
-                  fontFamily: 'sans-serif', // Myanmar Text with fallback.
-                  fontWeight: 600,
-                }}
-              >
-                CONTRERAS
-              </tspan>
-            </text>
-          </svg>
+          {/* Logo - SVG */}
+          <Logo className="w-8 h-8 dark:text-dark-accent text-light-primary" />
+          {/* Logo Name - SVG */}
+          <LogoName className="w-36 h-8 dark:text-dark-accent text-light-primary sm:block hidden" />
         </div>
       </Link>
 
