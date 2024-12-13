@@ -48,7 +48,7 @@ cd myportfolio
 
 npm install
 
-**Usage**
+## Usage
 1. Start the development server
 
 npm run dev
@@ -57,7 +57,7 @@ npm run dev
 
 Navigate to http://localhost:5173 in your browser to view the portfolio.
 
-**Deployment**
+## Deployment
 The project is deployed using GitHub Pages. To deploy your own version:
 
 1. Build the project
@@ -70,7 +70,7 @@ npm run deploy
 
 Ensure the homepage field in package.json is set to https://<your-username>.github.io/<your-repo-name>/.
 
-**Contributing**
+## Contributing
 Contributions are welcome! Please follow these steps:
 
 1. Fork the repository
