@@ -175,7 +175,7 @@ const Projects: React.FC = () => {
     <section
       id="projects"
       className=" 
-      h-screen sm:h-5/6 2xl:px-35 shadow-md
+      h-fit sm:h-5/6 2xl:px-35 shadow-md py-50
       dark:bg-dark-background bg-light-background bg-custompattern"
     >
       <div className="flex flex-col items-center justify-center">

@@ -1,15 +1,6 @@
-import React from 'react';
-
-interface LogoProps {
-    className?: string;
-}
-
-const Logo: React.FC<LogoProps> = ({className}) => {
-
-    return (
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-	 width="100%" viewBox="0 0 595 324" enable-background="new 0 0 595 324" className={className}>
-<path opacity="1.000000" stroke="none" 
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100%" viewBox="0 0 595 324" enable-background="new 0 0 595 324" xml:space="preserve">
+<path fill="#008080" opacity="1.000000" stroke="none" 
 	d="
 M444.532410,1.000000 
 	C460.811951,5.856965 465.171875,18.858690 466.060547,33.336601 
@@ -80,7 +71,7 @@ M200.498230,96.966499
 	C247.658386,52.706238 242.866257,54.017006 239.864868,55.911278 
 	C223.622421,66.162384 211.482513,80.538887 200.498230,96.966499 
 z"/>
-<path opacity="1.000000" stroke="none" 
+<path fill="#008080" opacity="1.000000" stroke="none" 
 	d="
 M596.000000,154.562500 
 	C590.112854,161.406937 584.130066,167.729218 578.365479,174.244644 
@@ -108,7 +99,7 @@ M596.000000,154.562500
 	C587.908569,139.069382 591.638977,143.431747 595.666626,147.911942 
 	C596.000000,150.041672 596.000000,152.083328 596.000000,154.562500 
 z"/>
-<path opacity="1.000000" stroke="none" 
+<path fill="#008080" opacity="1.000000" stroke="none" 
 	d="
 M1.000002,171.444168 
 	C6.557903,164.585556 12.244828,158.277527 17.643799,151.731964 
@@ -132,7 +123,3 @@ M1.000002,171.444168
 	C1.000000,176.629440 1.000000,174.258896 1.000002,171.444168 
 z"/>
 </svg>
-    );
-}
-
-export default Logo;

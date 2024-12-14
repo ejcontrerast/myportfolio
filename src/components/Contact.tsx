@@ -15,10 +15,10 @@ const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="h-4/6 sm:h-5/6 md:h-1/2 lg:1/3 p-8 flex flex-col justify-center items-center
+      className="h-4/5 sm:h-5/6 md:h-1/2 lg:1/3 p-8 flex flex-col justify-center items-center
        bg-light-background dark:bg-dark-background bg-custompattern"
     >
-      <h2 className="main-titles">
+      <h2 className="main-titles text-center">
       Let's work together!
       </h2>
       <p className="mt-4 text-lg text-light-secondary dark:text-dark-primary">

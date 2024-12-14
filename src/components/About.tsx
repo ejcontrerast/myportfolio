@@ -6,7 +6,7 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="h-screen w-auto
+      className="h-fit w-auto
       px-5 sm:px-10 md:px-20 lg:px-30 xl:px-50 2xl:70 py-30 sm:py-20 md:py-20
       dark:bg-dark-background bg-light-background bg-custompattern"
     >
