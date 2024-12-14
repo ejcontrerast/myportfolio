@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import Logo from './logo';
+import Logo from './Logo';
 import LogoName from './LogoName';
 // https://www.youtube.com/watch?v=vIBKSmWAdIA&t=36s
 
