@@ -10,7 +10,7 @@
 
 .btn-primary {
   @apply px-6 py-2 rounded-md relative 
-  radial-gradient hover:bg-secondary;
+  radial-gradient hover:bg-opacity;
 }
 
 .btn-primary-text {
@@ -26,23 +26,25 @@
   --solid-color-background-secondary: 38, 218, 138; /*  --solid-color-background */
   --overlay-color: 0,126,127; /*  --overlay-color */
   /* Light Mode Colors */
-  --color-primary: #2F4858;
-  --color-secondary: #26DA8A;
-  --color-accent: #008080;
-  --color-background: #F4F6F8;
+  --color-primary: rgb(47, 72, 88); /* #2F4858 */
+  --color-secondary: rgb(38, 218, 138); /* #26DA8A */
+  --color-accent: rgb(0, 128, 128); /* #008080 */
+  --color-background: rgb(244, 246, 248); /* #F4F6F8 */
+  --color-opacitycolor: rgba(38, 218, 137, 0.4); /* #26DA8A */
 }
 
 /* Dark Mode Colors */
 .dark {
-  --radial-gradient-background: 255, 255, 255; /* --radial-gradient-background */
-  --solid-color-background: 0,128,127; /*  --solid-color-background */
-  --solid-color-background-secondary: 38, 218, 138; /*  --solid-color-background */
-  --overlay-color: 38, 218, 138; /*  --overlay-color */
+  --radial-gradient-background: 255, 255, 255; /* radial-gradient-background */
+  --solid-color-background: 0, 128, 127; /* solid-color-background */
+  --solid-color-background-secondary: 38, 218, 138; /* solid-color-background-secondary */
+  --overlay-color: 38, 218, 138; /* overlay-color */
 
-  --color-primary: #CFCFDD;
-  --color-secondary: #008080;
-  --color-accent: #26DA8A;
-  --color-background: #22323C;
+  --color-primary: rgb(207, 207, 221); /* #CFCFDD */
+  --color-secondary: rgb(0, 128, 128); /* #008080 */
+  --color-accent: rgb(38, 218, 138); /* #26DA8A */
+  --color-background: rgb(34, 50, 60); /* #22323C */
+  --color-opacitycolor: rgba(0, 128, 128, 0.445);
 }
 
 .radial-gradient {
@@ -94,7 +96,7 @@
 
 .btn-secondary {
   @apply px-6 py-2 rounded-md
-  relative radial-gradient-secondary hover:bg-secondary;
+  relative radial-gradient-secondary hover:bg-opacity; 
 }
 
 .btn-secondary-text {
