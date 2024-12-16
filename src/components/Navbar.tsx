@@ -7,37 +7,42 @@ import LogoName from './LogoName';
 const Navbar: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     // Check the initial theme preference
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return localStorage.getItem('darkMode') === 'true' || false;
   });
 
   const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    if (isDarkMode) {
-      document.documentElement.classList.remove('dark');
-    } else {
-      document.documentElement.classList.add('dark');
-    }
+    setIsDarkMode((prev) => {
+      const newTheme = !prev;
+      if (newTheme) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      localStorage.setItem('darkMode', String(newTheme));
+      return newTheme;
+    });
   };
 
   useEffect(() => {
-    // Apply the initial theme preference
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
     }
+    localStorage.setItem('darkMode', String(isDarkMode));
   }, [isDarkMode]);
 
   return (
     <nav className="fixed top-0 z-50 shadow-md w-full flex justify-between items-center p-3 
-                  dark:bg-dark-background bg-light-background dark:bg-opacity-60 bg-opacity-60 backdrop-blur-sm sm:px-10 lg:px-16 2xl:px-24">
+        backdrop-blur-lg sm:px-10 lg:px-16 2xl:px-24">
+
       {/* Logo Section */}
       <Link to="hello" smooth={true} offset={-70} className="cursor-pointer">
         <div className="flex justify-center items-center">
           {/* Logo */}
-          <Logo className='h-7 w-auto dark:fill-dark-accent fill-light-primary'/>
+          <Logo className='h-7 w-auto fill-accent'/>
           {/* Logo Name */}
-          <LogoName className='h-[24px] w-auto ml-2 dark:fill-dark-accent fill-light-primary hidden sm:block'/>
+          <LogoName className='h-[24px] w-auto ml-2 fill-accent hidden sm:block'/>
         </div>
       </Link>
 
@@ -72,7 +77,7 @@ const Navbar: React.FC = () => {
 
         {/* Theme Toggle Button */}
         <button onClick={toggleTheme} 
-        className="bg-transparent focus:outline-none hover:ring-2 hover:ring-light-accent/80 rounded-sm p-1">
+        className="bg-transparent focus:outline-none hover:ring-2 hover:ring-accent/80 rounded-sm p-1">
           {isDarkMode ? (
             // Night icon SVG
             <svg

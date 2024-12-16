@@ -29,7 +29,6 @@ const ProjectCard: React.FC<Project> = ({
   <div
     className={`
       h-[480px] min-w-[300px] m-4 relative max-w-80
-      dark:bg-dark-additional/50 bg-light-background dark:bg-opacity-80 bg-opacity-90 
       backdrop-blur-lg shadow-md rounded-lg transform transition-transform hover:scale-105
     `}
   >
@@ -46,13 +45,13 @@ const ProjectCard: React.FC<Project> = ({
         <div className="relative">
           <div className="flex flex-row items-center relative mt-5 mb-3">
             {/* Title */}
-            <h3 className="dark:text-dark-secondary text-light-primary text-xl font-semibold">
+            <h3 className="text-secondary text-xl font-semibold">
               {title}
             </h3>
           
           </div>
           {/* Description */}
-          <p className="dark:text-dark-primary text-light-secondary mt-2 text-sm">
+          <p className="text-primary mt-2 text-sm">
             {description}
           </p>
         </div>
@@ -65,7 +64,7 @@ const ProjectCard: React.FC<Project> = ({
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-dark-accent mt-2 inline-block hover:text-dark-secondary"
+              className="text-accent mt-2 inline-block hover:text-secondary"
             >
               <BiLinkExternal size={35} />
             </a>
@@ -73,7 +72,7 @@ const ProjectCard: React.FC<Project> = ({
               href={github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-dark-accent mt-2 inline-block hover:text-dark-secondary"
+              className="text-accent mt-2 inline-block hover:text-secondary"
             >
               <BiLogoGithub size={35} />
             </a>
@@ -84,7 +83,7 @@ const ProjectCard: React.FC<Project> = ({
           {frameworks.map((framework) => {
             const IconComponent = frameworkIcons[framework];
             return IconComponent ? (
-              <span key={framework} className="flex items-center dark:text-dark-primary text-light-secondary dark:fill-dark-primary fill-light-secondary">
+              <span key={framework} className="flex items-center text-secondary fill-secondary">
                 <IconComponent className="mr-1" size={23} />
               </span>
             ) : (
@@ -105,7 +104,7 @@ function SampleNextArrow(props: ArrowProps) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} before:!text-dark-accent hover:!text-dark-secondary`}
+      className={`${className} before:!text-accent hover:!text-secondary`}
       style={{ ...style, display: "block" }}
       onClick={onClick}
     />
@@ -116,7 +115,7 @@ function SamplePrevArrow(props: ArrowProps) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} before:!text-dark-accent hover:!text-dark-secondary`}
+      className={`${className} before:!text-accent hover:!text-secondary`}
       style={{ ...style, display: "block" }}
       onClick={onClick}
     />
@@ -140,8 +139,8 @@ const Projects: React.FC = () => {
       </div>
     ),
     customPaging: () => (
-      <div className="w-auto h-2 mx-1 rounded-full bg-dark-accent 
-      hover:bg-dark-secondary transition-colors duration-200" />
+      <div className="w-auto h-2 mx-1 rounded-full bg-accent 
+      hover:bg-secondary transition-colors duration-200" />
     ),
     responsive: [
       {
@@ -176,7 +175,7 @@ const Projects: React.FC = () => {
       id="projects"
       className=" 
       h-fit sm:h-5/6 2xl:px-35 shadow-md py-50
-      dark:bg-dark-background bg-light-background bg-custompattern"
+      bg-background bg-custompattern"
     >
       <div className="flex flex-col items-center justify-center">
         <h2

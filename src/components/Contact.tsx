@@ -16,12 +16,12 @@ const Contact: React.FC = () => {
     <section
       id="contact"
       className="h-4/5 sm:h-5/6 md:h-1/2 lg:1/3 p-8 flex flex-col justify-center items-center
-       bg-light-background dark:bg-dark-background bg-custompattern"
+       bg-background bg-custompattern"
     >
       <h2 className="main-titles text-center">
       Let's work together!
       </h2>
-      <p className="mt-4 text-lg text-light-secondary dark:text-dark-primary">
+      <p className="mt-4 text-lg text-primary">
         Contact me:
       </p>
 
@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
       <ContactPopUp trigger={trigger} setTrigger={setTrigger}/>
         <ToastContainer 
            toastClassName={() => 
-            "dark:bg-dark-background bg-light-background dark:text-dark-primary text-light-secondary dark:border-dark-accent border-light-accent shadow-sm p-4 relative flex p-1 min-h-10 rounded-md justify-between overflow-hidden cursor-pointer"
+            "bg-background text-primary border-accent shadow-sm p-4 relative flex p-1 min-h-10 rounded-md justify-between overflow-hidden cursor-pointer"
           }
         />
     </section>

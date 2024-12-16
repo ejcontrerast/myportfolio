@@ -8,7 +8,7 @@ const About: React.FC = () => {
       id="about"
       className="h-fit w-auto
       px-5 sm:px-10 md:px-20 lg:px-30 xl:px-50 2xl:70 py-30 sm:py-20 md:py-20
-      dark:bg-dark-background bg-light-background bg-custompattern"
+      bg-background bg-custompattern"
     >
 
       {/* Text */}
@@ -22,33 +22,33 @@ const About: React.FC = () => {
 
             { /* Paragraph */}
             <div className='flex flex-col mt-6'>
-              <div className='mt-1 dark:text-dark-primary text-light-secondary'>
+              <div className='mt-1 text-primary'>
                 <p className="text-lg leading-relaxed max-w-3xl mx-auto px-2 text-left ">
                   As a 
-                  <span className="dark:text-dark-secondary text-light-primary font-semibold"> front-end developer </span> 
+                  <span className="text-secondary font-semibold"> front-end developer </span> 
                   passionate about creating responsive, user-friendly web applications with modern tools like 
-                  <span className="dark:text-dark-secondary text-light-primary font-semibold"> HTML, CSS, JavaScript, React, </span> and 
-                  <span className="dark:text-dark-secondary text-light-primary font-semibold"> Tailwind, </span> 
+                  <span className="text-secondary font-semibold"> HTML, CSS, JavaScript, React, </span> and 
+                  <span className="text-secondary font-semibold"> Tailwind, </span> 
                   I bring an understanding of back-end technologies, including 
-                  <span className="dark:text-dark-secondary text-light-primary font-semibold"> Node.js </span> 
+                  <span className="text-secondary font-semibold"> Node.js </span> 
                   and databases, which enhances my ability to contribute effectively on full-stack projects.
                 </p>
               </div>
               <div className="text-left px-2 mt-2 gap-2 leading-relaxed">
-                <p className="text-lg dark:text-dark-primary text-light-secondary">
-                  💻 <span className="dark:text-dark-primary text-light-secondary font-semibold">Specialties:</span> Front-end development, UI/UX integration
+                <p className="text-lg text-primary ">
+                  💻 <span className="text-primary font-semibold">Specialties:</span> Front-end development, UI/UX integration
                 </p>
-                <p className="text-lg dark:text-dark-primary text-light-secondary">
-                  🎯 <span className="dark:text-dark-primary text-light-secondary font-semibold">Passion:</span> Crafting clean, scalable code and engaging interfaces
+                <p className="text-lg text-primary ">
+                  🎯 <span className="text-primary font-semibold">Passion:</span> Crafting clean, scalable code and engaging interfaces
                 </p>
-                <p className="text-lg dark:text-dark-primary text-light-secondary">
-                  🚀 <span className="dark:text-dark-primary text-light-secondary font-semibold">Collaboration:</span> Excelling in team-oriented, innovative environments
+                <p className="text-lg text-primary">
+                  🚀 <span className="font-semibold">Collaboration:</span> Excelling in team-oriented, innovative environments
                 </p>
               </div>
             </div>
             
             {/* Photo */}
-            <div className="items-center justify-center rounded-full overflow-hidden mt-6 shadow-dark-accent drop-shadow-lg md:block hidden 
+            <div className="items-center justify-center rounded-full overflow-hidden mt-6 shadow-accent drop-shadow-lg md:block hidden 
                             w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
                 style={{ filter: 'drop-shadow(4px 4px 6px rgb(38 218 138 / 0.8))' }}>
               <img

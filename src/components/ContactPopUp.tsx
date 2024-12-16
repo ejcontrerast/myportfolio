@@ -49,39 +49,39 @@ function ContactPopUp({trigger, setTrigger}: Props  ) {
                     bg-gray-800 
                     bg-opacity-50 z-50
                     ">
-          <div className="dark:bg-dark-background bg-light-background dark:text-dark-accent text-light-accent p-8 rounded-lg shadow-lg max-w-md w-full">
-            <h2 className="text-2xl font-bold text-primary mb-4">Let's work together!</h2>
+          <div className="bg-background text-accent p-8 rounded-lg shadow-lg max-w-md w-full">
+            <h2 className="text-2xl font-bold text-secondary mb-4">Let's work together!</h2>
             {/* Contact Form */}
             <form onSubmit={onSubmit}>
               <div className="mb-4">
-                <label className="block font-medium dark:text-dark-primary  text-light-secondary mb-2" htmlFor="name">Name</label>
+                <label className="block font-medium text-primary mb-2" htmlFor="name">Name</label>
                 <input 
                   type="text" 
                   id="name" 
                   name='name'
-                  className="w-full px-3 py-2 dark:bg-dark-additional bg-light-additional dark:text-dark-primary text-light-secondary rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full px-3 py-2 bg-additional text-primary rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="Your Name" 
                   required />
               </div>
 
               <div className="mb-4">
-                <label className="block font-medium dark:text-dark-primary text-light-secondary mb-2" htmlFor="email">Email</label>
+                <label className="block font-medium text-primary mb-2" htmlFor="email">Email</label>
                 <input 
                   type="email" 
                   id="email" 
                   name='email'
-                  className="w-full px-3 py-2 dark:bg-dark-additional bg-light-additional dark:text-dark-primary text-light-secondary  rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full px-3 py-2 bg-additional text-primary rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="Your Email" 
                   required />
               </div>
 
               <div className="mb-4">
-                <label className="block font-medium dark:text-dark-primary text-light-secondary mb-2" htmlFor="message">Message</label>
+                <label className="block font-medium text-primary mb-2" htmlFor="message">Message</label>
                 <textarea 
                   id="message" 
                   name='message'
                   rows={4}
-                  className="w-full px-3 py-2 dark:bg-dark-additional bg-light-additional dark:text-dark-primary text-light-secondary  rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full px-3 py-2 bg-additional text-primary rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="Your Message" 
                   required />
               </div>
@@ -91,12 +91,12 @@ function ContactPopUp({trigger, setTrigger}: Props  ) {
                 <button 
                   type="button" 
                   onClick={() => setTrigger(false)}
-                  className="dark:text-dark-secondary text-light-primary/90 hover:text-dark-accent hover:dark:text-dark-accent">
+                  className="text-secondary hover:text-accent">
                   Close
                 </button>
                 <button 
                   type="submit" 
-                  className="bg-primary dark:text-dark-primary text-light-secondary hover:text-dark-accent hover:dark:text-dark-accent px-4 py-2 rounded-md hover:bg-secondary">
+                  className="text-primary hover:text-accent px-4 py-2 rounded-md hover:bg-secondary">
                   Send
                 </button>
               </div>
