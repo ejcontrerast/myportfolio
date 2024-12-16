@@ -43,7 +43,7 @@ const ProjectCard: React.FC<Project> = ({
     {/* Main Content */}
     <div className="m-3 h-56 max-w-[280px] ml-4">
         <div className="relative">
-          <div className="flex flex-row items-center relative mt-5 mb-3">
+          <div className="flex flex-row items-center relative mt-2">
             {/* Title */}
             <h3 className="text-secondary text-xl font-semibold">
               {title}
@@ -51,7 +51,7 @@ const ProjectCard: React.FC<Project> = ({
           
           </div>
           {/* Description */}
-          <p className="text-primary mt-2 text-sm">
+          <p className="text-primary text-sm">
             {description}
           </p>
         </div>
