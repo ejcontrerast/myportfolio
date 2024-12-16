@@ -6,8 +6,13 @@ import LogoName from './LogoName';
 
 const Navbar: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    // Check the initial theme preference
-    return localStorage.getItem('darkMode') === 'true' || false;
+    // Check localStorage first
+    const stored = localStorage.getItem('darkMode');
+    if (stored !== null) {
+      return stored === 'true';
+    }
+    // If no stored preference, check system preference
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
 
   const toggleTheme = () => {
@@ -24,12 +29,24 @@ const Navbar: React.FC = () => {
   };
 
   useEffect(() => {
+    // Update theme when isDarkMode changes
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
     }
     localStorage.setItem('darkMode', String(isDarkMode));
+
+    // Listen for system theme changes
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (localStorage.getItem('darkMode') === null) {
+        setIsDarkMode(e.matches);
+      }
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
   }, [isDarkMode]);
 
   return (
