@@ -21,6 +21,8 @@
 }
 
 :root {
+  transition: background-color 0.3s, color 0.3s;
+  
   --radial-gradient-background: 0, 128, 128; /* --radial-gradient-background */
   --solid-color-background: 0,128,128; /*  --solid-color-background */
   --solid-color-background-secondary: 38, 218, 138; /*  --solid-color-background */

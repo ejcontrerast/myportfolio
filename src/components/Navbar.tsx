@@ -11,42 +11,46 @@ const Navbar: React.FC = () => {
     if (stored !== null) {
       return stored === 'true';
     }
-    // If no stored preference, check system preference
+    // Default to system preference if no stored preference
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
+
+  const applyTheme = (darkMode: boolean) => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('darkMode', String(darkMode));
+  };
 
   const toggleTheme = () => {
     setIsDarkMode((prev) => {
       const newTheme = !prev;
-      if (newTheme) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-      localStorage.setItem('darkMode', String(newTheme));
+      applyTheme(newTheme);
       return newTheme;
     });
   };
 
   useEffect(() => {
-    // Update theme when isDarkMode changes
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    localStorage.setItem('darkMode', String(isDarkMode));
-
-    // Listen for system theme changes
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = (e: MediaQueryListEvent) => {
-      if (localStorage.getItem('darkMode') === null) {
-        setIsDarkMode(e.matches);
+
+    const handleSystemChange = (e: MediaQueryListEvent) => {
+      const storedTheme = localStorage.getItem('darkMode');
+      if (!storedTheme) {
+        const prefersDark = e.matches;
+        setIsDarkMode(prefersDark);
+        applyTheme(prefersDark);
       }
     };
 
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
+    // Apply the theme initially based on current state
+    applyTheme(isDarkMode);
+
+    // Listen for system theme changes
+    mediaQuery.addEventListener('change', handleSystemChange);
+
+    return () => mediaQuery.removeEventListener('change', handleSystemChange);
   }, [isDarkMode]);
 
   return (
