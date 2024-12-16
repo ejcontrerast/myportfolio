@@ -29,17 +29,6 @@ export default {
           to: {transform: "translateX(-100%)"},
         },
       },
-      backdropBlur: {
-        'sm': '4px',
-        'md': '8px',
-        'lg': '12px',
-        'xl': '16px',
-      },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('tailwindcss-filters'), // Add this line for filters like backdrop-blur
-  ],
 };
