@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
 
         {/* Theme Toggle Button */}
         <button onClick={toggleTheme} 
-        className="bg-transparent focus:outline-none hover:ring-2 hover:ring-accent/80 rounded-sm p-1">
+        className="bg-transparent focus:outline-none hover:ring-2 hover:ring-accent rounded-sm p-1">
           {isDarkMode ? (
             // Night icon SVG
             <svg
@@ -106,7 +106,7 @@ const Navbar: React.FC = () => {
               width="800"
               height="800"
               viewBox="0 0 512 512"
-              className="w-auto h-5"
+              className="w-auto h-[17.3px]"
             >
               <path
                 d="M504.864 323.637a24.137 24.137 0 0 0-26.487-5.158c-26.92 11.402-55.471 17.185-84.859 17.185-50.762 0-98.865-17.292-137.581-49.088a221.303 221.303 0 0 1-16.035-14.542c-62.92-62.921-81.149-156.528-46.443-238.475A24.142 24.142 0 0 0 161.81 1.915c-31.493 13.343-59.786 32.433-84.093 56.741-103.537 103.537-103.534 272.01.006 375.554 47.9 47.898 110.871 75.229 178.214 77.603 3.185.111 6.377.188 9.581.188 70.925 0 137.61-27.624 187.766-77.78 24.308-24.311 43.4-52.605 56.738-84.094a24.144 24.144 0 0 0-5.158-26.49z"
@@ -122,7 +122,7 @@ const Navbar: React.FC = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
-              className="w-auto h-5"
+              className="w-auto h-[17.3px]"
             >
               <path
                 fill="#FFC10A"
