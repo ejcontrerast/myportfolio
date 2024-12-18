@@ -22,11 +22,11 @@
 
 :root {
   transition: background-color 0.3s, color 0.3s;
-  
+
   --radial-gradient-background: 0, 128, 128; /* --radial-gradient-background */
-  --solid-color-background: 0,128,128; /*  --solid-color-background */
+  --solid-color-background: 0, 128, 128; /*  --solid-color-background */
   --solid-color-background-secondary: 38, 218, 138; /*  --solid-color-background */
-  --overlay-color: 0,126,127; /*  --overlay-color */
+  --overlay-color: 0, 126, 127; /*  --overlay-color */
   /* Light Mode Colors */
   --color-primary: rgb(47, 72, 88); /* #2F4858 */
   --color-secondary: rgb(38, 218, 138); /* #26DA8A */
@@ -45,7 +45,7 @@
   --color-primary: rgb(207, 207, 221); /* #CFCFDD */
   --color-secondary: rgb(0, 128, 128); /* #008080 */
   --color-accent: rgb(38, 218, 138); /* #26DA8A */
-  --color-background: rgb(34, 50, 60); /* #22323C */
+  --color-background: rgb(12, 14, 15); /* #22323C */
   --color-opacitycolor: rgba(0, 128, 128, 0.445);
 }
 
@@ -98,7 +98,7 @@
 
 .btn-secondary {
   @apply px-6 py-2 rounded-md
-  relative radial-gradient-secondary hover:bg-opacity; 
+  relative radial-gradient-secondary hover:bg-opacity;
 }
 
 .btn-secondary-text {

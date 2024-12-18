@@ -3,7 +3,7 @@
       "id": 1,
       "title": "MineSweeper",
       "frameworks": ["React", "Typescript", "Tailwind", "CSS"],
-      "description": "Minesweeper game clean architecture, advanced game mechanics like real-time bomb counters, and recursive algorithms.",
+      "description": "Neon Minesweeper game clean architecture, advanced game mechanics like real-time bomb counters, and recursive algorithms.",
       "image": "/static/images/MineSweeper.png",
       "link": "https://minesweeper-two-lemon.vercel.app/",
       "github": "https://github.com/ejcontrerast/minesweeper"
