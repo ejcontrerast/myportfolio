@@ -72,14 +72,14 @@ const ProjectCard: React.FC<Project> = ({
               href={github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent mt-2 inline-block hover:text-secondary"
+              className={`text-accent mt-2 inline-block hover:text-secondary ${github ? "" : "hidden"}`}
             >
               <BiLogoGithub size={35} />
             </a>
           </div>
         </div>
         {/* Frameworks */}
-        <div className="flex flex-wrap gap-2 absolute bottom-0 right-0 m-5">
+        <div className="flex flex-wrap gap-2 absolute bottom-0 right-0 m-7">
           {frameworks.map((framework) => {
             const IconComponent = frameworkIcons[framework];
             return IconComponent ? (
@@ -127,8 +127,8 @@ const Projects: React.FC = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 5,
+    slidesToScroll: 5,
     initialSlide: 0,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,

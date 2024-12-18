@@ -1,6 +1,6 @@
 import { BiLogoReact, BiLogoTailwindCss, BiLogoGithub, BiLogoTypescript, BiLogoMongodb, BiLogoPython, BiLogoJavascript, BiLogoJava, BiLogoNodejs, BiSolidFileCss,BiSolidFileHtml, BiLogoPhp} from "react-icons/bi";
-import { RiSupabaseLine } from "react-icons/ri";
-import { SiMysql } from "react-icons/si";
+import { RiSupabaseLine,RiWordpressFill  } from "react-icons/ri";
+import { SiMysql, SiGooglesheets  } from "react-icons/si";
 
 export const frameworkIcons: { [key: string]: React.ElementType } = {
   CSS: BiSolidFileCss,
@@ -17,5 +17,7 @@ export const frameworkIcons: { [key: string]: React.ElementType } = {
   Nodejs: BiLogoNodejs,
   MySQL: SiMysql,
   Supabase: RiSupabaseLine,
+  Wordpress: RiWordpressFill,
+  GoogleSheets: SiGooglesheets
 };
 
