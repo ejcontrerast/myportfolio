@@ -52,7 +52,7 @@ function ContactPopUp({trigger, setTrigger}: Props  ) {
           <div className="bg-background text-accent p-8 rounded-lg shadow-lg max-w-md w-full">
             <h2 className="text-2xl font-bold text-secondary mb-4">Let's work together!</h2>
             {/* Contact Form */}
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} className='outline-accent caret-accent'>
               <div className="mb-4">
                 <label className="block font-medium text-primary mb-2" htmlFor="name">Name</label>
                 <input 
