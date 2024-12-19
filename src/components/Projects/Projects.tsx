@@ -61,6 +61,7 @@ const ProjectCard: React.FC<Project> = ({
           {/* External Links */}
           <div className="inline-block absolute bottom-0 left-0 m-3">
             <a
+              aria-label={`External Link to ${title}`}
               href={link}
               target="_blank"
               rel="noopener noreferrer"
@@ -69,6 +70,7 @@ const ProjectCard: React.FC<Project> = ({
               <BiLinkExternal size={35} />
             </a>
             <a
+              aria-label="GitHub Repository"
               href={github}
               target="_blank"
               rel="noopener noreferrer"
